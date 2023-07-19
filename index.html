@@ -6,6 +6,22 @@
   <meta name="robots" content="noindex">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
+if (window !== window.top) {
+  // This code will be executed only if the current window is embedded within an iframe
+  // You can choose to display a message or take any other action here
+
+  // Get the URL of the parent window (the page containing the iframe)
+  var parentUrl = document.referrer;
+  
+  // Display a message along with the parent URL
+  document.body.innerHTML = "<h1>This website cannot be loaded within an iframe.</h1>" +
+                            "<h2>Parent URL:https://www.shounak.in/</h2>";
+  
+  // Alternatively, you can redirect the user to another page:
+  // window.location.href = "https://example.com/not_in_iframe.html";
+}
+  </script>
+  <script>
 if(window.top != window.self){
     top.location.href = document.location.href;
 }
