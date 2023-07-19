@@ -6,7 +6,7 @@
       padding: 0;
       background-color: #000000;
       color: #ffffff;
-      margin-bottom: 40px;
+      margin-bottom: 55px;
     }
     .profile {
       text-align: center;
@@ -138,7 +138,7 @@
       text-align: center;
       padding: 5px;
       position: fixed-bottom;
-      height: 40px;
+      height: 55px;
       left: 0;
       bottom: 0;
       width: 100%;
