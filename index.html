@@ -130,22 +130,38 @@ if(window.top != window.self){
     $("#current-year").text(currentYear);
     </script>
     <script>
+    // Function to fetch the blog posts from Cloudflare Workers backend
     async function fetchBlogPosts() {
-      try {
-        const response = await fetch("/rss"); // The URL to your backend proxy
-        const rssText = await response.text();
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(rssText, "text/xml");
+      const backendUrl = "https://blogrss.drshounak.workers.dev/api/posts"; // Replace with your Cloudflare Workers domain
 
-        // Rest of the code for displaying the blog posts (same as before)...
+      try {
+        const response = await fetch(backendUrl);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch blog posts: ${response.status} ${response.statusText}`);
+        }
+
+        const data = await response.json();
+        displayBlogPosts(data);
       } catch (error) {
         console.error(error);
         document.getElementById("blogPosts").innerHTML = "<p>Failed to fetch blog posts.</p>";
       }
     }
 
+    // Function to display the blog posts on the website
+    function displayBlogPosts(posts) {
+      const blogPostHtml = posts.map(post => `
+        <div>
+          <h2><a href="${post.link}" target="_blank">${post.title}</a></h2>
+          <p>${post.description}</p>
+        </div>
+      `).join("");
+
+      document.getElementById("blogPosts").innerHTML = blogPostHtml;
+    }
+
     // Call the function to fetch and display the blog posts
     fetchBlogPosts();
-    </script>
+  </script>
 </body>
 </html>
