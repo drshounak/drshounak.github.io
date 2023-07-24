@@ -119,6 +119,8 @@ if(window.top != window.self){
   <a href="mailto:shounak@drshounak.com"><i class="fa fa-envelope"></i>  Email Me</a>
   </div>
   <br>
+  <div id="blogPosts"></div>
+  <br>
   <div class="footer">
     <div class="footer-content">
       <p>&copy; <span id="current-year"></span> <a href="https://www.shounak.in" target="_blank" rel="noopener noreferrer">Shounak Pal</a> | <a href="https://blog.smartgoat.me/smartgoat/about_us/" target="_blank" rel="noopener noreferrer">SmartGoat Websites</a></p>
@@ -126,6 +128,24 @@ if(window.top != window.self){
     <script>
     var currentYear = new Date().getFullYear();
     $("#current-year").text(currentYear);
+    </script>
+    <script>
+    async function fetchBlogPosts() {
+      try {
+        const response = await fetch("/rss"); // The URL to your backend proxy
+        const rssText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(rssText, "text/xml");
+
+        // Rest of the code for displaying the blog posts (same as before)...
+      } catch (error) {
+        console.error(error);
+        document.getElementById("blogPosts").innerHTML = "<p>Failed to fetch blog posts.</p>";
+      }
+    }
+
+    // Call the function to fetch and display the blog posts
+    fetchBlogPosts();
     </script>
 </body>
 </html>
