@@ -140,8 +140,19 @@ if(window.top != window.self){
           throw new Error(`Failed to fetch blog posts: ${response.status} ${response.statusText}`);
         }
 
-        const data = await response.json();
-        displayBlogPosts(data);
+        const rssText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(rssText, "text/xml");
+        const items = xmlDoc.querySelectorAll("item");
+
+        const posts = Array.from(items).map(item => {
+          const title = item.querySelector("title").textContent;
+          const link = item.querySelector("link").textContent;
+          const description = item.querySelector("description").textContent;
+          return { title, link, description };
+        });
+
+        displayBlogPosts(posts);
       } catch (error) {
         console.error(error);
         document.getElementById("blogPosts").innerHTML = "<p>Failed to fetch blog posts.</p>";
