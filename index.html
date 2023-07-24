@@ -132,7 +132,7 @@ if(window.top != window.self){
     <script>
     // Function to fetch the blog posts from Cloudflare Workers backend
     async function fetchBlogPosts() {
-      const backendUrl = "https://blogrss.drshounak.workers.dev/api/posts"; // Replace with your Cloudflare Workers domain
+      const backendUrl = "https://blogrss.drshounak.workers.dev/"; // Replace with your Cloudflare Workers domain
 
       try {
         const response = await fetch(backendUrl);
