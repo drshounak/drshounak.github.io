@@ -85,10 +85,9 @@ if(window.top != window.self){
       color: #a5defa;
       font-family: 'Open Sans';
     }
-    h2 a {
+    h3 a {
       text-decoration: none;
       color: #d8fac0;
-      justify-content: center;
       font-family: 'Open Sans';
     }  
   </style>
@@ -195,7 +194,7 @@ if(window.top != window.self){
     function displayBlogPosts(posts) {
       const blogPostHtml = posts.map(post => `
         <div>
-          <h2><a href="${post.link}" target="_blank">${post.title}</a></h2>
+          <h3><a href="${post.link}" target="_blank">${post.title}</a></h3>
           <p>${post.description}</p>
         </div>
       `).join("");
