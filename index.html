@@ -82,7 +82,7 @@ if(window.top != window.self){
     }
     h2 a {
       text-decoration: none;
-      color: #ff9900;
+      color: #fffaed;
     }  
   </style>
 </head>
@@ -141,7 +141,7 @@ if(window.top != window.self){
   <a href="mailto:shounak@drshounak.com"><i class="fa fa-envelope"></i>  Email Me</a>
   </div>
   <br>
-  <h2>Here is some of my Blog Posts</h2>
+  <h2 style="color: #a5defa; justify-content: center;">Here are some of my latest Blog Posts</h2>
   <div id="blogPosts"></div>
   <br>
   <div class="footer">
@@ -175,7 +175,7 @@ if(window.top != window.self){
           return { title, link, description };
         });
 
-        displayBlogPosts(posts.slice(0, 4));
+        displayBlogPosts(posts.slice(0, 5));
       } catch (error) {
         console.error(error);
         document.getElementById("blogPosts").innerHTML = "<p>Failed to fetch blog posts.</p>";
