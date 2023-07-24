@@ -80,6 +80,10 @@ if(window.top != window.self){
       margin: 0 0 10px;
       color: #ff9900; /* Yellow text color for post titles */
     }
+    h2 a {
+      text-decoration: none;
+      color: #ff9900;
+    }  
   </style>
 </head>
 <body>
@@ -137,6 +141,7 @@ if(window.top != window.self){
   <a href="mailto:shounak@drshounak.com"><i class="fa fa-envelope"></i>  Email Me</a>
   </div>
   <br>
+  <h2>Here is some of my Blog Posts</h2>
   <div id="blogPosts"></div>
   <br>
   <div class="footer">
@@ -170,7 +175,7 @@ if(window.top != window.self){
           return { title, link, description };
         });
 
-        displayBlogPosts(posts);
+        displayBlogPosts(posts.slice(0, 4));
       } catch (error) {
         console.error(error);
         document.getElementById("blogPosts").innerHTML = "<p>Failed to fetch blog posts.</p>";
