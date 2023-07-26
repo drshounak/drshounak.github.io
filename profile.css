@@ -167,7 +167,7 @@
       text-decoration: none;
     }
     .topbar {
-       background-color: #0018ff;
+       background-image: linear-gradient(to right, #5a3f37, #2c7744);
        position: top;
        justify-content: center;
        color: #fff;
@@ -176,8 +176,9 @@
        padding: 1px;
        box-sizing: border-box;
        width: 100%;
-       height: 45px;
+       height: 55px;
        text-align: center;
+       font-size: 18px;
      }
      .fa {
        padding: 1px 20px 1px 20px;
