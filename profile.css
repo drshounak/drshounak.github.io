@@ -45,10 +45,9 @@
       margin-top: 25px;
     }
     .profile .websites-container {
-      margin-top: 40px;
-      display: grid;
-      grid-gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      margin-top: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
     }
     .profile .website {
       margin-bottom: 15px;
@@ -68,7 +67,7 @@
       background-color: #0056b3;
     }
     .profile .websites2-container {
-      margin-top: 30px;
+      margin-top: 20px;
     }
     .profile .website2 {
       margin-bottom: 15px;
@@ -88,7 +87,7 @@
       background-color: #38b048;
     }
     .profile .websites3-container {
-      margin-top: 30px;
+      margin-top: 20px;
     }
     .profile .website3 {
       margin-bottom: 15px;
@@ -108,7 +107,7 @@
       background-color: #73175c;
     }
     .profile .website4 {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
     .profile .website4 a {
       display: inline-block;
