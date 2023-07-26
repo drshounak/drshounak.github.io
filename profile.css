@@ -7,13 +7,15 @@
       background-color: #000000;
       color: #ffffff;
       margin-bottom: 55px;
-      display: grid;
-      grid-gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
     .profile {
       text-align: center;
       margin-top: 50px;
+    }
+    .profile webgroup {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
     .profile-picture {
       width: 150px;
