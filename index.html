@@ -161,6 +161,8 @@ if(window.top != window.self){
   <br>
   <div id="blogPosts"></div>
   <br>
+  <div id="medblogPosts"></div>
+  <br>
   <div class="footer">
     <div class="footer-content">
       <p>&copy; <span id="current-year"></span> <a href="https://www.shounak.in" target="_blank" rel="noopener noreferrer">Shounak Pal</a> | <a href="https://blog.smartgoat.me/smartgoat/about_us/" target="_blank" rel="noopener noreferrer">SmartGoat Websites</a></p>
@@ -213,6 +215,51 @@ if(window.top != window.self){
 
     // Call the function to fetch and display the blog posts
     fetchBlogPosts();
+  </script>
+  <script>
+    // Function to fetch the blog posts from Cloudflare Workers backend
+    async function fetchmedBlogPosts() {
+      const backendUrl = "https://medblogrss.drshounak.workers.dev/api/posts"; // Replace with your Cloudflare Workers domain
+
+      try {
+        const response = await fetch(backendUrl);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch blog posts: ${response.status} ${response.statusText}`);
+        }
+
+        const rssText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(rssText, "text/xml");
+        const items = xmlDoc.querySelectorAll("item");
+
+        const posts = Array.from(items).map(item => {
+          const title = item.querySelector("title").textContent;
+          const link = item.querySelector("link").textContent;
+          const description = item.querySelector("description").textContent;
+          return { title, link, description };
+        });
+
+        displaymedBlogPosts(posts.slice(0, 4));
+      } catch (error) {
+        console.error(error);
+        document.getElementById("medblogPosts").innerHTML = "<p>Failed to fetch blog posts.</p>";
+      }
+    }
+
+    // Function to display the blog posts on the website
+    function displaymedBlogPosts(posts) {
+      const medblogPostHtml = posts.map(post => `
+        <div>
+          <h3><a href="${post.link}" target="_blank">${post.title}</a></h3>
+          <p>${post.description}</p>
+        </div>
+      `).join("");
+
+      document.getElementById("medblogPosts").innerHTML = medblogPostHtml;
+    }
+
+    // Call the function to fetch and display the blog posts
+    fetchmedBlogPosts();
   </script>
 </body>
 </html>
