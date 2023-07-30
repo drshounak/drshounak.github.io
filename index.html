@@ -186,7 +186,11 @@ if(window.top != window.self){
   <br>
   <h2 style="color: #a5defa; justify-content: center;">Here are some of my latest Blog Posts</h2>
   <br>
+  <h2>TSG Press</h2>
+  <br>
   <div id="blogPosts"></div>
+  <br>
+  <h2>MedBlogs</h2>
   <br>
   <div id="medblogPosts"></div>
   <br>
@@ -221,7 +225,7 @@ if(window.top != window.self){
           return { title, link, description };
         });
 
-        displayBlogPosts(posts.slice(0, 5));
+        displayBlogPosts(posts.slice(0, 3));
       } catch (error) {
         console.error(error);
         document.getElementById("blogPosts").innerHTML = "<p>Failed to fetch blog posts.</p>";
@@ -266,7 +270,7 @@ if(window.top != window.self){
           return { title, link, description };
         });
 
-        displaymedBlogPosts(posts.slice(0, 4));
+        displaymedBlogPosts(posts.slice(0, 3));
       } catch (error) {
         console.error(error);
         document.getElementById("medblogPosts").innerHTML = "<p>Failed to fetch blog posts.</p>";
