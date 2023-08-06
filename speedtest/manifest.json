@@ -8,12 +8,12 @@
   "theme_color": "#4caf50",
   "icons": [
     {
-      "src": "/ipchecker/icon-193x193.png",
+      "src": "/speedtest/icon-193x193.svg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/ipchecker/icon-513x513.png",
+      "src": "/speedtest/icon-513x513.svg",
       "type": "image/png",
       "sizes": "512x512"
     }
