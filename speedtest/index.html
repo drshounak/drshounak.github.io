@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speed Test - The SmartGoat Blog</title>
+    <meta name="description" content="Free Internet Speed Test Tool">
+    <meta name="keywords" content="Internet speed test, test network speed, speed test, Test my Net, Net Speed">
+    <link rel="canonical" href="https://smartgoat.me/speedtest/">
+    <link rel="alternate" href="https://shounak.in/speedtest/">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
+    <meta name="robots" description="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
+    <style>
+        body {
+           background-color: #292929;
+           color: #fff;
+           text-align: center;
+        }
+        h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            font-size: 3rem;
+            color: #74c1d4;
+            text-shadow: 1px 1px #000;
+        }
+        p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.5rem;
+        }
+        p a {
+            color: #6df295;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .speedtest-container {
+            background-color: #000;
+            width: 400px;
+            margin: 0 auto;
+            box-shadow: 3px 3px black;
+            border-radius: 10px;
+        }
+        .speedtest-iframe {
+            width: 100%;
+            height: 360px;
+            border: none;
+            border-radius: 10px;
+        }
+        .footer {
+      background-color: #000000;
+      color: #ffffff;
+      text-align: center;
+      padding: 5px;
+      position: fixed-bottom;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 12px;
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 14px;
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    .footer a {
+      color: #8998B6;
+      text-decoration: none;
+      font-size: 14px;
+      font-family: 'Roboto Mono', monospace;
+      }
+    </style>
+</head>
+<body>
+    <h1>Test Your Internet Speed</h1>
+    <p><strong>The SmartGoat Blog</strong></p>
+    <p><strong><a href="https://smartgoat.me/">Read our interesting posts</strong></a></p>
+    <br>
+    <div class="speedtest-container">
+        <iframe class="speedtest-iframe" src="https://openspeedtest.com/speedtest"></iframe>
+    </div>
+    <br> 
+    <br>
+    <div class="footer">
+    <div class="footer-content">
+      <p style="font-size: 14px;font-family: 'Roboto Mono', monospace;">&copy; <span id="current-year"></span> <a href="https://shounak.in/" target="_blank" rel="noopener noreferrer">Shounak Pal</a> | <a href="https://smartgoat.me/" target="_blank" rel="noopener noreferrer">The SmartGoat Blog</a></p>
+    </div>
+  </div>
+  <script>
+    var currentYear = new Date().getFullYear();
+    $("#current-year").text(currentYear);
+  </script>
+    
+</body>
+</html>
