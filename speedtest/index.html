@@ -9,10 +9,79 @@
     <link rel="alternate" href="https://shounak.in/speedtest/">
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/speedtest/manifest.json"/>
     <meta name="robots" description="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Speed Test - The SmartGoat Blog",
+      "url": "https://smartgoat.me/speedtest/",
+      "breadcrumb": {
+       "@type": "BreadcrumbList",
+       "itemListElement": [
+         {
+           "@type": "ListItem",
+           "position": 1,
+           "name": "Home",
+           "item": "https://smartgoat.me/",
+           "description": "The SmartGoat Blog."
+         },
+         {
+           "@type": "ListItem",
+           "position": 2,
+           "name": "Speed Test - The SmartGoat Blog",
+           "item": "https://smartgoat.me/speedtest/",
+           "description": "Free Internet Speed Test Tool. Test your network speed."
+         }
+       ]
+     }
+  }
+  </script>
+  <script>
+if (window !== window.top) {
+  // This code will be executed only if the current window is embedded within an iframe
+  // You can choose to display a message or take any other action here
+
+  // Get the URL of the parent window (the page containing the iframe)
+  var parentUrl = document.referrer;
+  
+  // Display a message along with the parent URL
+  document.body.innerHTML = "<h1>This website cannot be loaded within an iframe.</h1>" +
+                            "<h2>Parent URL:https://smartgoat.me/speedtest/</h2>";
+  
+  // Alternatively, you can redirect the user to another page:
+  // window.location.href = "https://example.com/not_in_iframe.html";
+}
+  </script>
+  <script>
+        // Register the service worker
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/speedtest/service-worker.js')
+              .then(registration => {
+                console.log('Service Worker registered:', registration);
+              })
+              .catch(error => {
+                console.log('Service Worker registration failed:', error);
+              });
+          });
+        }
+        
+        window.addEventListener('beforeinstallprompt', (event) => {
+          event.preventDefault();
+          const installButton = document.getElementById('install-button');
+          installButton.style.display = 'block';
+          
+          installButton.addEventListener('click', () => {
+            event.prompt();
+            installButton.style.display = 'none';
+          });
+        });
+    </script>
     <style>
         body {
            background-color: #292929;
