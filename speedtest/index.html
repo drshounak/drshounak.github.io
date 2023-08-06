@@ -5,6 +5,7 @@
     <title>Speed Test - The SmartGoat Blog</title>
     <meta name="description" content="Free Internet Speed Test Tool">
     <meta name="keywords" content="Internet speed test, test network speed, speed test, Test my Net, Net Speed">
+    <link rel="icon" type="image/png" href="https://smartgoat.me/speedtest/icon-193x193.svg" alt="IP Address Checker">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//code.jquery.com">
     <link rel="canonical" href="https://smartgoat.me/speedtest/">
@@ -85,7 +86,7 @@ if (window !== window.top) {
     </script>
     <style>
         body {
-           background-color: #292929;
+           background-color: #000000;
            color: #fff;
            text-align: center;
         }
@@ -117,6 +118,45 @@ if (window !== window.top) {
             border: none;
             border-radius: 10px;
         }
+
+        .check-button {
+      background-color: #4CAF50;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .check-button2 {
+      background-color: #ff2eb8;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .check-button3 {
+      background-color: #00b3b3;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
         .footer {
       background-color: #000000;
       color: #ffffff;
@@ -159,7 +199,22 @@ if (window !== window.top) {
     <div class="speedtest-container">
         <iframe class="speedtest-iframe" src="https://openspeedtest.com/speedtest"></iframe>
     </div>
-    <br> 
+    <br>
+    <br>
+    <div class="center">
+      <a class="check-button" href="/ipchecker/otherip/">Check Other IP Address</a>
+    </div>
+    <br>
+     <br>
+    <div class="center">
+      <a class="check-button2" href="/ipchecker/nslookup/">Check Any website's IP Address</a>
+    </div>
+    <br>
+     <br>
+    <div class="center">
+      <a class="check-button3" href="/ipchecker/">Check Your Ip Adress</a>
+    </div>
+  </div>
     <br>
     <div class="footer">
     <div class="footer-content">
