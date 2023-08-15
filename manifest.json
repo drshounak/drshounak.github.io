@@ -1,0 +1,16 @@
+{
+  "name": "Profile Page - Shounak Pal",
+  "short_name": "Shounak's Profile",
+  "description": "Personal profile page of Shounak Pal",
+  "start_url": "https://shounak.in/",
+  "display": "standalone",
+  "background_color": "#202021",
+  "theme_color": "#29539b",
+  "icons": [
+    {
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8MMgrtaKVP8GoecBMqL1RlPhNCb6mnsWwDg&usqp=CAU",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
