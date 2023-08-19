@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shounak's Profile Page</title>
+    <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8MMgrtaKVP8GoecBMqL1RlPhNCb6mnsWwDg&usqp=CAU"/>
+  <link rel="canonical" href="https://shounak.in/">
+  <link rel="alternate" href="https://drshounak.github.io/">
+  <link rel="preconnect" href="https://images.unsplash.com/photo-1618022325802-7e5e732d97a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1948&q=80"/>
+  <link rel="preconnect" href="https://www.googletagmanager.com/gtag/js?id=G-ZB4VLNYFR2"/>
+  <link rel="preconnect" href="https://medblogrss.drshounak.workers.dev/api/posts"/>
+  <link rel="preconnect" href="https://blogrss.drshounak.workers.dev/api/posts"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+  <link rel="preconnect" href="https://code.jquery.com/jquery-3.6.0.min.js"/>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="preconnect" href="https://mlcii45x5t5z.i.optimole.com/cb:mvVzyF3a.lYb2w6jP/w:auto/id:8a2ce5598275fcab43814c2425927c45/directUpload/profile.jpeg"/>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js"/>
+  <link rel="preconnect" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8MMgrtaKVP8GoecBMqL1RlPhNCb6mnsWwDg&usqp=CAU"/>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZB4VLNYFR2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZB4VLNYFR2');
+</script>
+  <script>
+if (window !== window.top) {
+  // This code will be executed only if the current window is embedded within an iframe
+  // You can choose to display a message or take any other action here
+
+  // Get the URL of the parent window (the page containing the iframe)
+  var parentUrl = document.referrer;
+  
+  // Display a message along with the parent URL
+  document.body.innerHTML = "<h1>This website cannot be loaded within an iframe.</h1>" +
+                            "<h2>Parent URL:https://shounak.in/</h2>";
+  
+  // Alternatively, you can redirect the user to another page:
+  // window.location.href = "https://example.com/not_in_iframe.html";
+}
+  </script>
+  <script>
+if(window.top != window.self){
+    top.location.href = document.location.href;
+}
+  </script>
+  
+    <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    height: 100vh;
+    color: #ddd;
+  }
+  .container {
+    
+  }
+  .headline {
+    font-size: 5.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margine-top: 0.2em;
+    padding: 0 20px;
+    text-shadow: 1px 1px 2px white;
+  }
+  .description {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    max-width: 1000px;   
+    padding: 0 20px;
+    line-height: 1.5em;
+  }
+  .swipe-text {
+    font-size: 3.5em;
+    font-style: italic;
+    color: #888;
+    padding: 0 20px;
+    text-shadow: 1px 1px 2px white;
+  }
+  body {
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  transition: transform 0.3s ease;
+}
+
+
+
+
+</style>
+</head>
+<body>
+    
+    <div class="container" id="content">
+    <div class="headline">
+      Welcome to Shounak's Profile
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="description">
+      <i>Shounak is a practicing general physician with huge interests in not only medicine but also in different parts of science and engineering and their practical applications</i>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="swipe-text">
+      Swipe right to know more
+     </div>
+    </div>   
+   <script>
+    let startX;
+    let startY;
+
+    document.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+    });
+
+    document.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const endY = e.changedTouches[0].clientY;
+
+        const deltaX = endX - startX;
+        const deltaY = endY - startY;
+
+        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+            // Swipe left detected
+            if (deltaX < 0) {
+                // Slide animation
+                document.querySelector('.container').style.transform = 'translateX(-100vw)';
+
+                // Navigate to the target URL after a short delay
+                setTimeout(() => {
+                    window.location.href = '/profile/';
+                }, 300); // 300ms delay for animation to complete
+            }
+        }
+    });
+</script>
+
+
+</body>
+</html>
