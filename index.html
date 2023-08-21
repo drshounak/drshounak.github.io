@@ -133,20 +133,20 @@ if(window.top != window.self){
      </div>
     </div>   
    <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const container = document.querySelector('.container');
-    
-    const hammer = new Hammer(container);
-    
-    hammer.on('swiperight', function () {
-        container.style.transform = 'translateX(-100vw)';
-        
-        setTimeout(function () {
-            window.location.href = '/profile/';
-        }, 300); // 300ms delay for animation to complete
-    });
-});
-</script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const container = document.querySelector('.container');
+          
+          const hammer = new Hammer(container);
+          
+          hammer.on('swiperight', function () {
+              container.style.transform = 'translateX(-100vw)';
+              
+              setTimeout(function () {
+                  window.location.href = '/profile/';
+              }, 300); // 300ms delay for animation to complete
+          });
+      });
+    </script>
 
 
 
