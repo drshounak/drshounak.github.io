@@ -106,6 +106,12 @@ if(window.top != window.self){
 .container {
   transition: transform 0.3s ease;
 }
+img {
+   -webkit-filter: invert(1);
+   filter: invert(1);
+   height: 6em;
+   width: 6em;
+}        
 
 
 
@@ -113,7 +119,9 @@ if(window.top != window.self){
 </style>
 </head>
 <body>
-    
+    <div class="profile-picture">
+        <img src="https://cdn-cf.shounak.in/shounak-favicon.svg" alt="Shounak Pal favicon">
+    </div>
     <div class="container" id="content">
     <div class="headline">
       Welcome to Shounak's Profile
