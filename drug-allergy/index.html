@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
     <title>My Drug Allergy List</title>
     <style>
         body {
@@ -17,7 +16,7 @@
             background-color: #4CAF50;
             color: #fff;
             text-align: center;
-            padding: 10px;
+            padding: 1px;
         }
 
         main {
@@ -52,11 +51,12 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 16px;
+            margin-bottom: 5px;
         }
 
         button {
             padding: 10px 20px;
-            background-color: #4CAF50;
+            background-color: #2372cc;
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -85,7 +85,7 @@
         }
 
         #allergyTable th {
-            background-color: #4CAF50;
+            background-color: #2372cc;
             color: white;
         }
 
@@ -130,14 +130,18 @@
     
     <main>
         <section>
-            <h2>Allergy Status Legend:</h2>
+            <h2>Allergy Report Interpretation:</h2>
             <ul>
-                <li>No Allergy</li>
-                <li>Mild Allergy</li>
-                <li>Moderate Allergy</li>
-                <li>Severe Allergy</li>
+                <li style="color: green;">No Allergy (<strong>-</strong>) : Can be administered safely</li>
+                <li style="color: blue;">Mild Allergy (<strong>+/-</strong>) : Can be administered, with monitoring</li>
+                <li style="color: red;">Moderate Allergy (<strong>+</strong>) : Denote marginal sensitivity, <strong>Best to avoid</strong> unless deemed absolutely necessary.</li>
+                <li style="color: red;">Severe Allergy (<strong>++,+++</strong>) : <strong>Strictly avoided</strong></li>
             </ul>
         </section>
+        
+        <secton>
+            <h3 style="color: blue; text-align: center;"><a href="https://drive.google.com/file/d/1278Yd0BYf4XRXpLRULKMoIo9XAJwFuuw/view?usp=drivesdk" download>Download the reoprt pdf Here</a></h3>
+        </secton>
 
         <section id="autocomplete-container">
             <h2>Search for a Drug:</h2>
