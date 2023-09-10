@@ -120,6 +120,11 @@
         #autocomplete-list li:hover {
             background-color: #f4f4f4;
         }
+        p2 {
+           font-size: 20px;
+           color: #591616;
+           font-weight: bold; 
+        }
     </style>
 </head>
 <body>
@@ -147,13 +152,16 @@
             <h2>Search for a Drug:</h2>
             <input type="text" id="searchInput" placeholder="Enter drug name...">
             <button onclick="searchDrug()">Search</button>
+            <button onclick="clearSearch()">Clear</button> 
             <ul id="autocomplete-list"></ul>
         </section>
+        <br>
+        <h2>My Drug Allergies</h2>
 
         <section>
-            <h2>My Drug Allergies:</h2>
-            <div id="allergyTableContainer">
-                <table id="allergyTable">
+            <p2>Analgesics</p2>
+            <div class="allergyTableContainer">
+                <table class="allergyTable" id="allergyTable">
                     <thead>
                         <tr>
                             <th>Drug Name</th>
@@ -178,6 +186,35 @@
                     </tbody>
                 </table>
             </div>
+        </section>        
+        <section>
+            <p2>Antibiotics</p2>
+            <div class="allergyTableContainer">
+                <table class="allergyTable" id="allergyTable">
+                    <thead>
+                        <tr>
+                            <th>Drug Name</th>
+                            <th>Allergy Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Add your drug allergies here as table rows -->
+                        <tr>
+                            <td>Tetracycline</td>
+                            <td>Morderate</td>
+                        </tr>
+                        <tr>
+                            <td>Gatifloxacin</td>
+                            <td>Morderate</td>
+                        </tr>
+                        <tr>
+                            <td>Levofloxacin</td>
+                            <td>Morderate</td>
+                        </tr>
+                        <!-- Add more drugs and their allergy statuses as needed -->
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
     <br>
@@ -187,60 +224,77 @@
     </footer>
 
     <script>
-        // JavaScript for search and other functionality
-        const drugList = [
-            "Nimesulide",
-            "Etoricoxi",
-            "Aspirin",
-            "Drug 4",
-            // Add more drug names here
-        ];
+       // JavaScript for search and other functionality
+const drugList = [
+    "Nimesulide",
+    "Etoricoxi",
+    "Aspirin",
+    "Tetracycline",
+    "Gatifloxacin",
+    "Levofloxacin",
+    // Add more drug names here
+];
 
-        function searchDrug() {
-            const input = document.getElementById("searchInput").value.toLowerCase();
-            const table = document.getElementById("allergyTable");
-            const rows = table.getElementsByTagName("tr");
+function searchDrug() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const tables = document.getElementsByClassName("allergyTable"); // Use getElementsByClassName to select all tables
 
-            for (let i = 1; i < rows.length; i++) { // Start from 1 to skip the table header row
-                const drugName = rows[i].getElementsByTagName("td")[0].textContent.toLowerCase();
-                if (drugName.includes(input)) {
-                    rows[i].style.display = "";
-                } else {
-                    rows[i].style.display = "none";
-                }
+    for (let j = 0; j < tables.length; j++) {
+        const rows = tables[j].getElementsByTagName("tr");
+
+        for (let i = 1; i < rows.length; i++) { // Start from 1 to skip the table header row
+            const drugName = rows[i].getElementsByTagName("td")[0].textContent.toLowerCase();
+            if (drugName.includes(input)) {
+                rows[i].style.display = "";
+            } else {
+                rows[i].style.display = "none";
             }
         }
+    }
+}
+function clearSearch() {
+    document.getElementById("searchInput").value = ""; // Clear the search input
+    const tables = document.querySelectorAll(".allergyTable"); // Select all tables with the class "allergyTable"
+    
+    tables.forEach(table => {
+        const rows = table.getElementsByTagName("tr");
+        for (let i = 1; i < rows.length; i++) {
+            rows[i].style.display = ""; // Reset the display for all rows
+        }
+    });
+}
 
-        const searchInput = document.getElementById("searchInput");
-        const autocompleteList = document.getElementById("autocomplete-list");
+const searchInput = document.getElementById("searchInput");
+const autocompleteList = document.getElementById("autocomplete-list");
 
-        searchInput.addEventListener("input", function() {
-            const inputText = this.value.toLowerCase();
-            autocompleteList.innerHTML = '';
+searchInput.addEventListener("input", function() {
+    const inputText = this.value.toLowerCase();
+    autocompleteList.innerHTML = '';
 
-            if (inputText.length === 0) {
-                autocompleteList.style.display = 'none';
-                return;
-            }
+    if (inputText.length === 0) {
+        autocompleteList.style.display = 'none';
+        return;
+    }
 
-            const matches = drugList.filter(drug => drug.toLowerCase().includes(inputText));
-            if (matches.length === 0) {
-                autocompleteList.style.display = 'none';
-                return;
-            }
+    const matches = drugList.filter(drug => drug.toLowerCase().includes(inputText));
+    if (matches.length === 0) {
+        autocompleteList.style.display = 'none';
+        return;
+    }
 
-            autocompleteList.style.display = 'block';
-            matches.forEach(match => {
-                const listItem = document.createElement('li');
-                listItem.textContent = match;
-                autocompleteList.appendChild(listItem);
+    autocompleteList.style.display = 'block';
+    matches.forEach(match => {
+        const listItem = document.createElement('li');
+        listItem.textContent = match;
+        autocompleteList.appendChild(listItem);
 
-                listItem.addEventListener('click', function() {
-                    searchInput.value = match;
-                    autocompleteList.style.display = 'none';
-                });
-            });
+        listItem.addEventListener('click', function() {
+            searchInput.value = match;
+            autocompleteList.style.display = 'none';
         });
+    });
+});
+
     </script>
 </body>
 </html>
