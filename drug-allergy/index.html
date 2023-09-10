@@ -14,7 +14,7 @@
         }
 
         header {
-            background-color: #4CAF50;
+            background-color: #318235;
             color: #fff;
             text-align: center;
             padding: 1px;
@@ -30,12 +30,12 @@
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 28px;
         }
 
         h2 {
             font-size: 24px;
-            margine-bottom: 5px;
+            margin-bottom:5px;
         }
 
         ul {
@@ -69,7 +69,7 @@
         footer {
             text-align: center;
             padding: 1px;
-            background-color: #4CAF50;
+            background-color: #318235;
             color: #fff;
         }
 
@@ -127,6 +127,16 @@
            color: #591616;
            font-weight: bold; 
         }
+        /* CSS for highlighting search results */
+       .highlighted-row {
+           background-color: yellow; /* You can choose any highlight color you prefer */
+}
+
+@media all and (max-width: 768px) {
+           main {
+           margin: 1px 5px 1px 5px;
+           }
+        }        
     </style>
 </head>
 <body>
@@ -141,14 +151,14 @@
             <ul>
                 <li style="color: green;">No Allergy (<strong>-</strong>) : Can be administered safely</li>
                 <li style="color: blue;">Mild Allergy (<strong>+/-</strong>) : Can be administered, with monitoring</li>
-                <li style="color: red;">Moderate Allergy (<strong>+</strong>) : Denote marginal sensitivity, <strong>Best to avoid</strong> unless deemed absolutely necessary.</li>
-                <li style="color: red;">Severe Allergy (<strong>++,+++</strong>) : <strong>Strictly avoided</strong></li>
+                <li style="color: red;">Moderate Allergy (<strong>+</strong>) : Denote marginal sensitivity, <strong>Best to avoid unless deemed absolutely necessary</strong>.</li>
+                <li style="color: red;">Severe Allergy (<strong>++,+++</strong>) : <strong>Strictly avoid</strong></li>
             </ul>
         </section>
         <br>
         
         <secton>
-            <h3 style="color: blue; text-align: center;"><a href="https://drive.google.com/file/d/1278Yd0BYf4XRXpLRULKMoIo9XAJwFuuw/view?usp=drivesdk" download>Download the reoprt pdf Here</a></h3>
+            <h3 style="color: blue; text-align: center;"><a href="https://drive.google.com/file/d/1278Yd0BYf4XRXpLRULKMoIo9XAJwFuuw/view?usp=drivesdk" download>Download the report pdf Here</a></h3>
         </secton>
         <br>
 
@@ -160,7 +170,7 @@
             <ul id="autocomplete-list"></ul>
         </section>
         <br>
-        <br>    
+        <br>
         <h2>My Drug Allergies</h2>
 
         <section>
@@ -308,12 +318,48 @@
                         <tr>
                             <td>Oxytetracycline</td>
                             <td>Mild</td>
+                            <tr>
+                            <td>Clindamycin</td>
+                            <td>Morderate</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
                         </tr>
                         <!-- Add more drugs and their allergy statuses as needed -->
                     </tbody>
                 </table>
             </div>
         </section>
+        <section>
+            <p2>Antidiarrhoeals / OT</p2>
+            <div class="allergyTableContainer">
+                <table class="allergyTable" id="allergyTable">
+                    <thead>
+                        <tr>
+                            <th>Drug Name</th>
+                            <th>Allergy Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Add your drug allergies here as table rows -->
+                        <tr>
+                            <td>Bupivacaine</td>
+                            <td>Morderate</td>
+                        </tr>
+                        <tr>
+                            <td>Lignocaine</td>
+                            <td>None</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>    
     </main>
     <br>
 
@@ -350,11 +396,22 @@ const drugList = [
     "Amoxycillin",
     "Ampicillin",
     "Oxytetracycline",
+    "Bupivacaine",
+    "Lignocaine",
+    "Clindamycin",
     "",
     "",
     "",
     "",
     "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "","","","","","","","","","","","","","","","","","","","",
+    "","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",
     "Tetracycline",
     "Gatifloxacin",
     "Levofloxacin",
@@ -420,8 +477,8 @@ searchInput.addEventListener("input", function() {
         });
     });
 });
-
+    
     </script>
 </body>
-    </html>
-    
+</html>
+                            
