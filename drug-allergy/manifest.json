@@ -1,0 +1,18 @@
+{
+  "name": "My Drug Allergy Profile",
+  "short_name": "Drug Allergy",
+  "description": "A blog where insanity begins",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#317EFB",
+  "icons": [
+    {
+      "src": "https://cdn.shounak.in/drug-allergy.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    }
+  ]
+}
