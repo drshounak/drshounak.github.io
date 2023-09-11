@@ -10,7 +10,7 @@
   "theme_color": "#317EFB",
   "icons": [
     {
-      "src": "https://cdn.shounak.in/drug-allergy.png",
+      "src": "/drug-allergy/drug-allergy.png",
       "type": "image/png",
       "sizes": "48x48"
     }
