@@ -10,7 +10,7 @@
   <h1>Chatbot</h1>
   <div id="chat-container">
     <ul id="messages"></ul>
-    <input type="text" id="message-input" placeholder="Type your message">
+    <input type="text" id="message-input" placeholder="Type your question">
     <button type="button" id="send-button">Send</button>
   </div>
 
@@ -19,25 +19,30 @@
 
     $(document).ready(function() {
       $("#send-button").click(function() {
-        const message = $("#message-input").val();
+        const question = $("#message-input").val();
 
-        $.ajax({
-          url: chatbotURL,
-          method: "POST",
-          contentType: "application/json",
-          data: JSON.stringify({
-            query: message
-          }),
-          success: function(response) {
-            const responseMessage = response.response;
+        // Use the curl command to fetch the response in JSON format
+        const response = $(`
+          curl -X POST \\
+            -H 'Content-Type: application/json' \\
+            -d '{
+              "query": "${question}"
+            }' \\
+            ${chatbotURL}
+        `).text();
 
-            $("#messages").append(`
-              <li>
-                <p>Chatbot: ${responseMessage}</p>
-              </li>
-            `);
-          }
-        });
+        // Parse the JSON response
+        const responseObject = JSON.parse(response);
+
+        // Get the chat bot response
+        const chatBotResponse = responseObject.response;
+
+        // Display the chat bot response
+        $("#messages").append(`
+          <li>
+            <p>Chatbot: ${chatBotResponse}</p>
+          </li>
+        `);
 
         $("#message-input").val("");
       });
