@@ -1,52 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chatbot</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>Serverless Llama Chat</title>
 </head>
 <body>
-  <h1>Chatbot</h1>
-  <div id="chat-container">
-    <ul id="messages"></ul>
-    <input type="text" id="message-input" placeholder="Type your question">
-    <button type="button" id="send-button">Send</button>
-  </div>
+  <h1>Serverless Llama Chat</h1>
 
+  <input type="text" id="message" />
+  <button type="button" id="send">Send</button>
+
+  <div id="chat"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
-    const chatbotURL = "https://shounak.in/chat-backend/";
-
     $(document).ready(function() {
-      $("#send-button").click(function() {
-        const question = $("#message-input").val();
+      $("#send").click(function() {
+        var message = $("#message").val();
 
-        // Use the curl command to fetch the response in JSON format
-        const response = $(`
-          curl -X POST \\
-            -H 'Content-Type: application/json' \\
-            -d '{
-              "query": "${question}"
-            }' \\
-            ${chatbotURL}
-        `).text();
-
-        // Parse the JSON response
-        const responseObject = JSON.parse(response);
-
-        // Get the chat bot response
-        const chatBotResponse = responseObject.response;
-
-        // Display the chat bot response
-        $("#messages").append(`
-          <li>
-            <p>Chatbot: ${chatBotResponse}</p>
-          </li>
-        `);
-
-        $("#message-input").val("");
+        // Send the message to the serverless llama chat backend
+        $.ajax({
+          url: "https://shounak.in/chat-backend",
+          type: "POST",
+          data: { message: message },
+          success: function(data) {
+            // Add the message to the chat window
+            $("#chat").append("<p>" + message + "</p>");
+          }
+        });
       });
     });
   </script>
+  <script>
+  $(document).ready(function() {
+    $("#send").click(function() {
+      var message = $("#message").val();
+
+      // Send the message to the serverless llama chat backend
+      $.ajax({
+        url: "https://shounak.in/chat-backend",
+        type: "POST",
+        data: { message: message },
+        success: function(data) {
+          // Add the message to the chat window
+          $("#chat").append("<p>" + message + "</p>");
+
+          // Display the response from the serverless llama chat backend
+          $("#chat").append("<p>" + data.response + "</p>");
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
