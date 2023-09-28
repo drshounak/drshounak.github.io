@@ -22,34 +22,14 @@
           url: "https://shounak.in/chat-backend",
           type: "POST",
           data: { message: message },
+          dataType: "json",
           success: function(data) {
             // Add the message to the chat window
-            $("#chat").append("<p>" + message + "</p>");
+            $("#chat").append("<p>" + data.response + "</p>");
           }
         });
       });
     });
   </script>
-  <script>
-  $(document).ready(function() {
-    $("#send").click(function() {
-      var message = $("#message").val();
-
-      // Send the message to the serverless llama chat backend
-      $.ajax({
-        url: "https://shounak.in/chat-backend",
-        type: "POST",
-        data: { message: message },
-        success: function(data) {
-          // Add the message to the chat window
-          $("#chat").append("<p>" + message + "</p>");
-
-          // Display the response from the serverless llama chat backend
-          $("#chat").append("<p>" + data.response + "</p>");
-        }
-      });
-    });
-  });
-</script>
 </body>
 </html>
