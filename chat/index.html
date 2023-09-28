@@ -22,10 +22,9 @@
           url: "https://shounak.in/chat-backend",
           type: "POST",
           data: { message: message },
-          dataType: "json",
           success: function(data) {
             // Add the message to the chat window
-            $("#chat").append("<p>" + data.response + "</p>");
+            $("#chat").append("<p>" + message + "</p>");
           }
         });
       });
