@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Bot</title>
+    <style>
+        /* Add some basic styling to make it look nice */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        #chat-box {
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        #user-input {
+            width: 80%;
+            padding: 5px;
+        }
+        #submit-button {
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chat Bot</h1>
+        <div id="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="submit-button">Submit</button>
+    </div>
+
+    <script>
+        const chatBox = document.getElementById('chat-box');
+        const userInput = document.getElementById('user-input');
+        const submitButton = document.getElementById('submit-button');
+
+        submitButton.addEventListener('click', async () => {
+            const userMessage = userInput.value;
+
+            try {
+                // Send the user input to the domain and get the response
+                const response = await fetch('https://lamama.drshounak.workers.dev/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        prompt: userMessage
+                    })
+                });
+
+                if (response.ok) {
+                    const jsonResponse = await response.json();
+
+                    // Extract and format the bot's response
+                    const botResponse = jsonResponse.response.replace(/\n\n/g, ' ');
+
+                    // Display the user's message and the bot's response in the chat box
+                    chatBox.innerHTML += `<p>User: ${userMessage}</p>`;
+                    chatBox.innerHTML += `<p>Chat Bot: ${botResponse}</p>`;
+                } else {
+                    console.error('Error:', response.statusText);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+
+            // Clear the user input field
+            userInput.value = '';
+        });
+    </script>
+</body>
+</html>
