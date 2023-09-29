@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Links</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    background-image: url('https://images.unsplash.com/photo-1602292678572-16cb94ea0d88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60');
+    background-repeat: no-repeat;  
+    height: 100vh;
+    min-height: 100%;  
+    color: #ddd;
+    max-width: 800px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+        /* Add some basic CSS for card design */
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 35px 20px;            
+            text-align: center;
+            background-color: transparent;
+            width: 300px;
+            display: inline-block;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            
+						  }
+  
+        /* Style for the links inside the cards */
+        .card a {
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        h1 {
+            font-size: 44px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 5px #f8a100;
+        }
+         /* Media query for desktop screens */
+        @media (min-width: 768px) {
+            .card-container {
+                display: flex;
+                flex-wrap: wrap;
+                }
+           .card:nth-child(odd) {
+                
+                box-shadow:
+						  inset 0 0 15px #f8a100,
+						  0 0 10px #f8a100,
+						  0 0 15px #fff;    
+            }
+            .card:nth-child(even) {
+                
+               box-shadow:
+						  inset 0 0 15px #ffaaf4,
+						  0 0 10px #ffaaf4,
+						  0 0 15px #fff;
+            }
+        }
+
+        /* Media query for mobile screens */
+        @media (max-width: 767px) {
+            .card-container {
+                display: flex;
+                flex-direction: column;
+            /* First card aligns to the left */
+            .card:nth-child(odd) {
+                align-self: flex-start;
+                box-shadow:
+						  inset 0 0 15px #f8a100,
+						  0 0 10px #f8a100,
+						  0 0 15px #fff;
+            }
+
+            /* Second card aligns to the right */
+            .card:nth-child(even) {
+                align-self: flex-end;
+               box-shadow:
+						  inset 0 0 15px #ffaaf4,
+						  0 0 10px #ffaaf4,
+						  0 0 15px #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Navigate Here Sailor (⁠◔⁠‿⁠◔⁠)</h1>
+    </div>
+    <br>
+    <div class="card-container">
+        <!-- Create individual card elements with links -->
+        <div class="card">
+            <a href="/contact/">Contact Me</a>
+        </div>
+
+        <div class="card">
+            <a href="/profile/">Detailed Profile</a>
+        </div>
+        
+        <div class="card">
+            <a href="/music">Listen to My Playlists</a>
+        </div>
+
+        <div class="card">
+            <a href="/blog/">Read My Blog</a>
+        </div>
+        
+        <div class="card">
+            <a href="/apps/">My App Library</a>
+        </div>
+
+        <div class="card">
+            <a href="/photogallery/">My Photogallery</a>
+        </div>
+        
+        <div class="card">
+            <a href="https://sites.shounqk.in/">All of my Websites</a>
+        </div>
+
+        <br>
+    </div>
+    <br>
+</body>
+  </html>
+  
