@@ -1,44 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shounak's Profile Page</title>
-    <meta name="theme-color" content="#000000">
-    <meta name="description" content="personal profile page of Shounak Pal">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page - Shounak Pal</title>
+  <meta name="theme-color" content="#000">
   <link rel="icon" type="image/x-icon" href="https://cdn-cf.shounak.in/shounak-favicon.svg"/>
-  <link rel="canonical" href="https://shounak.in/">
-  <link rel="alternate" href="https://drshounak.github.io/">
-  <link rel="preconnect" href="/profile/">  
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">    
-  <link rel="preconnect" href="https://images.unsplash.com/photo-1618022325802-7e5e732d97a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1948&q=80"/>
+  <link rel="canonical" href="https://shounak.in/profile/">
+  <link rel="alternate" href="https://drshounak.github.io/profile/">
+  <link rel="preconnect" href="https://images.unsplash.com/photo-1581362716668-90cdec6b4882?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"/>
+  
   <link rel="preconnect" href="https://www.googletagmanager.com/gtag/js?id=G-ZB4VLNYFR2"/>
   <link rel="preconnect" href="https://medblogrss.drshounak.workers.dev/api/posts"/>
   <link rel="preconnect" href="https://blogrss.drshounak.workers.dev/api/posts"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com/"/>
   <link rel="preconnect" href="https://code.jquery.com/jquery-3.6.0.min.js"/>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"/>  
   <link rel="preconnect" href="https://mlcii45x5t5z.i.optimole.com/cb:mvVzyF3a.lYb2w6jP/w:auto/id:8a2ce5598275fcab43814c2425927c45/directUpload/profile.jpeg"/>
   <link rel="preconnect" href="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js"/>
   <link rel="preconnect" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8MMgrtaKVP8GoecBMqL1RlPhNCb6mnsWwDg&usqp=CAU"/>
-  <link rel="preconnect" href="https://images.unsplash.com/photo-1602292678572-16cb94ea0d88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60"/>  
   <link rel="manifest" href="/manifest.json" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">  
-  <meta name="robots" content="index">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-  
-  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">-->
-<meta property="og:title" content="Shounak Pal - profile page, a general physician" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8MMgrtaKVP8GoecBMqL1RlPhNCb6mnsWwDg&usqp=CAU" />
-<meta property="og:url" content="https://shounak.in/" />
-<metta property="og:site_name" content="Shounak Pal - Profile"/>    
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZB4VLNYFR2"></script>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="https://kit.fontawesome.com/e6e42efdc8.js" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZB4VLNYFR2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -68,204 +54,537 @@ if(window.top != window.self){
 }
   </script>
   
-    <style>
-  body {
-    margin: 0;
-    padding: 0;
+  <link href="https://fonts.googleapis.com/css?family=Open Sans|Roboto+Mono:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+      
+      <style>
+    /* Add your custom styles here */
+    
+    .profile {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .profile webgroup {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .profile-picture {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #ddd;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    .profile h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .profile h2 {
+      color: #a5defa;
+      justify-content: center;
+    }
+    .profile p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #aaa;
+    }
+    .profile .social-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      margin-bottom: 25px;
+    }
+    .profile .websites-container {
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .profile .website {
+      margin-bottom: 15px;
+    }
+    .profile .website a {
+      display: inline-block;
+      width: 300px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .profile .website a:hover {
+      background-color: #0056b3;
+    }
+    .profile .websites2-container {
+      margin-top: 20px;
+    }
+    .profile .website2 {
+      margin-bottom: 15px;
+    }
+    .profile .website2 a {
+      display: inline-block;
+      width: 300px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #2ebf41;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .profile .website2 a:hover {
+      background-color: #38b048;
+    }
+    .profile .websites3-container {
+      margin-top: 20px;
+    }
+    .profile .website3 {
+      margin-bottom: 15px;
+    }
+    .profile .website3 a {
+      display: inline-block;
+      width: 300px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #9c1e7c;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .profile .website3 a:hover {
+      background-color: #73175c;
+    }
+    .profile .website4 {
+      margin-bottom: 15px;
+    }
+    .profile .website4 a {
+      display: inline-block;
+      width: 300px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #c98224;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .profile .website4 a:hover {
+      background-color: #965e14;
+    }
+    .email-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .email-button a {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid #CCCCCC;
+      color: #CCCCCC;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .email-button a:hover {
+      background-color: #CCCCCC;
+      color: #000000;
+    }
+    
+    .footer {
+      background-color: #121212;
+      color: #f5f5f5;
+      text-align: center;
+      padding: 5px;
+      position: fixed-bottom;
+      height: 55px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .footer-content {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+     
+    .footer a {
+      color: #64b5f6;
+      text-decoration: none;
+    }
+    .topbar {
+       background-color: #000;
+       position: top;
+       justify-content: center;
+       color: #fff;
+       left: 0;
+       top: 0;
+       padding: 1px;
+       box-sizing: border-box;
+       width: 100%;
+       height: 55px;
+       text-align: center;
+       font-size: 18px;
+     }
+     .fab {
+       padding: 1px 20px 1px 20px;
+       font-size: 26px;
+       width: 20px;
+       height:20px;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       justify-content: center;
+       margin-top: 0px;
+     }
+     .fa-x-twitter {
+       color: #fff;
+     }
+     .fa-instagram {
+       color: red;
+     }
+     .fa-github {
+       color: #fff;
+     }
+     .fa-linkedin-in {
+       color: #0077b5;
+     }
+     .fa-envelope {
+       padding: 0px 15px 0px 1px;
+     }
+     .fa-youtube {
+       color: red;
+     }
+  
+    body {
+            margin: 0;
+    padding: 5px;
     font-family: Arial, sans-serif;
     background-color: #000;
-    background-image: url('https://images.unsplash.com/photo-1602292678572-16cb94ea0d88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60');
-    background-repeat: no-repeat;  
+    background-image: url('https://images.unsplash.com/photo-1602292678572-16cb94ea0d88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60');  
     height: 100vh;
     min-height: 100%;  
     color: #ddd;
-  }
-  .container {
-    
-  }
-  .headline {
-    font-size: 5.5em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margine-top: 0.2em;
-    padding: 0 20px;
-    text-shadow: 1px 1px 2px white;
-  }
-  .description {
-    font-size: 2.2em;
-    margin-bottom: 30px;
-    max-width: 1000px;   
-    padding: 0 20px;
-    line-height: 1.5em;
-  }
-  .swipe-text {
-    font-size: 3.5em;
-    font-style: italic;
-    color: #b0b0b0;
-    padding: 0 20px;
-    text-shadow: 1px 1px 2px white;
-  }
-  body {
-  transition: background-color 0.3s ease;
-}
-
-.container {
-  transition: transform 0.3s ease;
-}
-img {
-   -webkit-filter: invert(1);
-   filter: invert(1);
-   height: 5em;
-   width: 5em;
-}
-button {
-  border: none;
-  color: #000;
-  padding: 12px 22px;
-  text-align: center;
-  text-decoration: none;
-  display: center;
-  font-size: 20px;
-  margin: 0 auto;
-  cursor: pointer;
-  
-  border-radius: 20px;
-}
-.button {
-    margin-left: 220px
-}
-/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
-.icon-bar {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-
-/* Style the icon bar links */
-.icon-bar a {
-  display: block;
-  text-align: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-right: 5px;
-  transition: all 0.3s ease;
-  color: white;
-  font-size: 20px;
-}
-
-/* Style the social media icons with color, if you want */
-.icon-bar a:hover {
-  background-color: #000;
-}
-
-.Instagram {
-  background-color: transparent;
-  color: white;
-}
-
-.twitter {
-  background-color: transparent;
-  color: white;
-}
-
-.email {
-  background-color: transparent;
-  color: white;
-}
-
-.linkedin {
-  background-color: transparent;
-  color: white;
-}
-
-.whatsapp {
-  background-color: transparent;
-  color: white;
-      }
-        
-@media only screen and (max-width: 600px) {
-  .headline {
-    font-size: 4em;
-    margin-bottom: 10px;
-  }
-  .description {
-      font-size: 1.5em;
-      padding: 0 15px;
-  }
-  .swipe-text {
-      font-size: 2em;
-  }
-  img {
-     height: 3em;
-     width: 3em; 
-  }
-  button {
-      font-size: 18px;
-      padding: 8px 18px;
-  }
-  .button {
+    max-width: 800px;
+    justify-content: center;
     margin: 0 auto;
-    text-align: center;
-  }
-  .description {
-    max-width: 86%;
-    text-align: justify; 
-  }  
-}        
+        }
+    .topbar a {
+      color: #9c9a9a;
+      font-family: 'Roboto Mono', monospace;
+    }
+    .webgroup {
+      max-width: 650px;
+      margin: 0 auto;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .fa {
+       padding: 1px 20px 1px 20px;
+       font-size: 26px;
+       width: 20px;
+       height:20px;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       justify-content: center;
+       margin-top: 0px;
+    }
+    .fa-envelope {
+       padding: 0px 15px 0px 1px;
+       font-size: 18px;
+    }
+    #blogPosts {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      font-family: 'Open Sans';
+    }
 
+    .postBox {
+      padding: 20px;
+      background-color: #333333; /* Darker box background color */
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1); /* Light shadow */
+      font-family: 'Open Sans';
+    }
+    h2 {
+      margin: 0 0 10px;
+      text-align: center;
+      color: #a5defa;
+      font-family: 'Open Sans';
+    }
+    h3 a {
+      text-decoration: none;
+      color: #d8fac0;
+      font-family: 'Open Sans';
+    }
+    #medblogPosts {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      font-family: 'Open Sans';
+    }
 
-
-
-</style>
+    .postBox {
+      padding: 20px;
+      background-color: #333333; /* Darker box background color */
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1); /* Light shadow */
+      font-family: 'Open Sans';
+    }
+    h2 {
+      margin: 0 0 10px;
+      text-align: center;
+      color: #a5defa;
+      font-family: 'Open Sans';
+    }
+    h3 a {
+      text-decoration: none;
+      color: #d8fac0;
+      font-family: 'Open Sans';
+    }
+    kofi-container {
+        margin: auto;
+        display: flex; 
+        text-align: center;
+      }
+      .drsp-button a {
+      color: #000000;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+  </style>
 </head>
 <body>
-    <div class="profile-picture">
-        <img src="https://cdn-cf.shounak.in/shounak-favicon.svg" alt="Shounak Pal favicon">
+  <div class="topbar">
+    <h1 style="font-family: open sans; font-size: 22px;">My Profile Page</h1>
+    <p><a href="https://status.shounak.in/">Status</a> / <a href="/music/">Music</a> / <a href="https://shounak.in/drug-allergy">Allergy</a> / <a href="https://shounak.in/menu/" target="_blank">More</a></p>
+    <br>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="profile">
+    <img src="https://mlcii45x5t5z.i.optimole.com/cb:mvVzyF3a.lYb2w6jP/w:auto/id:8a2ce5598275fcab43814c2425927c45/directUpload/profile.jpeg" alt="Profile Picture" class="profile-picture">
+    <h1 style="color: #d8f772;">Dr.Shounak Pal</h1>
+    <p style="color: #cbe3f7;">General Physician / MBBS</p>
+    <p style="color: #e3ebd1;">A passionate doctor / Blogger / Investor</p>
+    <p> Medicine to Rockets / Humans to computers / Tesla and Spacex</p>
+    <p>Owner of / smartgoat.me / drsp.org</p>
+    <br>
+    <div class="social-links">
+        <h2 style="color: #9d58c4;">Social:
+      <a href="https://www.twitter.com/pal_shounak/" class="fab fa-x-twitter" target="_blank"></a>
+      <!--<a href="https://www.instagram.com/doc_shounak/" class="fab fa-instagram" target="_blank"></a>-->
+      <a href="https://linkedin.com/in/dr-shounak-pal/" class="fab fa-linkedin-in" target="_blank"></a>
+      <a href="https://github.com/drshounak/" class="fab fa-github"target="_blank"></a>
+      <a href="https://www.youtube.com/@drshounakpal" class="fab fa-youtube" target="_blank"></a></h2>
     </div>
-    <div class="container" id="content">
-    <div class="headline">
-      Welcome to Shounak's Profile
+    <br>
+    <div class="about-me" style="margin:0 auto; text-align: center; max-width: 800px; font-family: Open Sans;">
+        <h2 style="color: #faf5e3;">A Little bit about Me</h2>
+        <p style="text-align: justify; color: #fff;">Hi, Welcome to my personal space. Have a pleasant visit. I try to fix humans most of the time and also love to break computers in some idle time. Learning new things and sharing then is my very old habit. When I started MedBlogs I learned a bit of web dev on the way. So thats the reason I have so many websites now. Allow me to give you a little tour about my online space.</p>
+        <hr>
+        <br>
+        <p style="text-align: justify; color: #fff;"><strong><i>Medical things</i>:</strong>I have seperate my Medical endeavours under the brand umbrella of drsp.org (Dr Shounak Pal Organisation). My website drshounak.com, My clinic serenityhealth.co.in and my medical blog medblogs.org are combined under drsp.org</p>
+        <div class="drsp-button" style="background-color: #ffffff; display: inline-block; padding: 10px 20px; border: 2px solid #CCCCCC; color: #CCCCCC; text-decoration: none; border-radius: 10px; transition: all 0.3s ease;">
+            <a href="https://drsp.org/" ><strong>Visit DRSP.ORG</strong></a>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <p style="text-align: justify; color: #fff;"><strong><i>The Wired Stuffs</i>:</strong> For all my other endeavours I have seperated them under the name The SmartGoat. Mostly it is a tech blog The SmartGoat Blog. It also operates multiple web apps under it. All my websites are also designed and copyrighted under THE SmartGoat Blog. If this temp thing grows into a real thing later. I will make things under tsgpress.com. Untill then tsgpress.com will be in a cold storage.<p> 
+        <div class="drsp-button" style="background-color: #ffffff; display: inline-block; padding: 10px 20px; border: 2px solid #CCCCCC; color: #CCCCCC; text-decoration: none; border-radius: 10px; transition: all 0.3s ease;">
+            <a href="https://smartgoat.me/?ref=shounak.in" ><strong>Visit SmartGoat</strong></a>
+        </div> 
+        <br>  
+        <hr>    
+        <br>
+        <br>
+        <h2>Some of my Websites You may visit</h2>
+        <p>To know about all things i operate or to check whether if any of my services is down visit the kuma button above the profile picture</p>
+    </div> 
+    <br>   
+    <br>
+   <div class="webgroup">
+    <div class="websites-container">
+      <div class="website">
+        <a href="https://www.drshounak.com/" target="_blank">Professional Page</a>
+      </div>
+      <div class="website">
+        <a href="https://www.serenityhealth.co.in/" target="_blank">SerenityHealth-Book Appointment</a>
+      </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="description">
-      <i>Dr.Shounak is a practicing general physician with huge interests in not only medicine but also in different branches of science and engineering and their practical applications</i>
+    <div class="websites-container">
+      <div class="website2">
+        <a href="https://www.medblogs.org" target="_blank">MedBlogs</a>
+      </div>
+      <div class="website2">
+        <a href="https://smartgoat.me/?ref=shounak.in" target="_blank">The SmartGoat Blog</a>
+      </div>
     </div>
-    <br>
-    <br>
-<div class="button">
-    <button type="button" style="margin-right: 10px; box-shadow: inset 0 0 15px #f8a100;" onclick="window.location.href='https://serenityhealth.co.in/';">Serenity Health</button>
-    <button type="button" style="box-shadow: inset 0 0 15px #ffaaf4;" onclick="window.location.href='/nav/';">Navigate More</button>
-</div>
-    <br>    
-    <br>
-    <div class="swipe-text">
-      Swipe right to know more
-     </div>
- <div class="icon-bar">
-  <a href="https://www.instagram.com/doc_shounak/" class="Instagram"><i class="fab fa-instagram"></i></a>
-  <a href="https://twitter.com/iamdrspal" class="twitter"><i class="fab fa-x-twitter"></i></a>
-  <a href="mailto:shounak@shounak.in" class="email"><i class="fa fa-envelope"></i></a>
-  <a href="https://linkedin.com/in/dr-shounak-pal/" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-  <a href="https://wa.me/+913335542877" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
- </div>      
-   <script>
-      document.addEventListener('DOMContentLoaded', function () {
-          const container = document.querySelector('.container');
-          
-          const hammer = new Hammer(container);
-          
-          hammer.on('swipe', function () {
-              container.style.transform = 'translateX(-100vw)';
-              
-              setTimeout(function () {
-                  window.location.href = '/nav/';
-              }, 300); // 300ms delay for animation to complete
-          });
-      });
+    <div class="websites-container">
+      <div class="website3">
+        <a href="https://smartgoat.me/nnw/?ref=shounak.in" target="_blank">WhatsApp without saving Number</a>
+      </div>
+      <div class="website3">
+        <a href="https://smartgoat.me/ipchecker/?ref=shounak.in" target="_blank">IP-Checker</a>
+      </div>
+    </div>
+    <div class="websites-container">
+      <div class="website4">
+        <a href="https://smartgoat.me/speedtest/?ref=shounak.in" target="_blank">Check Your Internet Speed</a>
+      </div>
+      <div class="website4">
+        <a href="https://smartgoat.me/smartgoat?ref=shounak.in" target="_blank">The Smart Goat</a>
+      </div>
+      <!-- Add more websites as needed -->
+    </div>
+  </div>
+  </div>
+  <br>
+  <div class="email-button">
+  <a href="mailto:shounak@drshounak.com"><i class="fa fa-envelope"></i>  Email Me</a>
+  </div>
+  <br>
+  <br>
+  <h2 style="color: #FFD5BF; justify-content: center;">Here are some of my latest Blog Posts</h2>
+  <br>
+  <h2 style="color: #ffffff; font-size: 26px;">The SmartGoat Blog</h2>
+  <br>
+  <div id="blogPosts"></div>
+  <br>
+  <div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js" data-button-color="#61bfea" data-button-text-color="#FFFFFF" data-site="https://smartgoat.me" async></script></div>
+  <br>
+  <br>
+  <h2 style="color: #ffffff; font-size: 26px;">MedBlogs</h2>
+  <br>
+  <div id="medblogPosts"></div>
+  <div style="min-height: 58px; max-width: 440px;margin: 0 auto;"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js" data-text-color="#ffffff" data-button-color="#000000" data-button-text-color="#FFFFFF" data-site="https://www.medblogs.org" async></script></div>
+  <br>
+  <br>
+  <div class="footer">
+    <div class="footer-content">
+      <p>&copy; <span id="current-year"></span> <a href="https://shounak.in" target="_blank" rel="noopener noreferrer">Shounak Pal</a> | <a href="https://smartgoat.me" target="_blank">SmartGoat Websites</a></p>
+    </div>
+    <script>
+    var currentYear = new Date().getFullYear();
+    $("#current-year").text(currentYear);
     </script>
+    <script>
+    // Function to fetch the blog posts from Cloudflare Workers backend
+    async function fetchBlogPosts() {
+      const backendUrl = "https://blogrss.drshounak.workers.dev/api/posts"; // Replace with your Cloudflare Workers domain
+
+      try {
+        const response = await fetch(backendUrl);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch blog posts: ${response.status} ${response.statusText}`);
+        }
+
+        const rssText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(rssText, "text/xml");
+        const items = xmlDoc.querySelectorAll("item");
+
+        const posts = Array.from(items).map(item => {
+          const title = item.querySelector("title").textContent;
+          const link = item.querySelector("link").textContent;
+          const description = item.querySelector("description").textContent;
+          return { title, link, description };
+        });
+
+        displayBlogPosts(posts.slice(0, 3));
+      } catch (error) {
+        console.error(error);
+        document.getElementById("blogPosts").innerHTML = "<p>Failed to fetch blog posts.</p>";
+      }
+    }
+
+    // Function to display the blog posts on the website
+    function displayBlogPosts(posts) {
+      const blogPostHtml = posts.map(post => `
+        <div>
+          <h3><a href="${post.link}" target="_blank">${post.title}</a></h3>
+          <p>${post.description}</p>
+        </div>
+      `).join("");
+
+      document.getElementById("blogPosts").innerHTML = blogPostHtml;
+    }
+
+    // Call the function to fetch and display the blog posts
+    fetchBlogPosts();
+  </script>
+  <script>
+    // Function to fetch the blog posts from Cloudflare Workers backend
+    async function fetchmedBlogPosts() {
+      const backendUrl = "https://medblogrss.drshounak.workers.dev/api/posts"; // Replace with your Cloudflare Workers domain
+
+      try {
+        const response = await fetch(backendUrl);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch blog posts: ${response.status} ${response.statusText}`);
+        }
+
+        const rssText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(rssText, "text/xml");
+        const items = xmlDoc.querySelectorAll("item");
+
+        const posts = Array.from(items).map(item => {
+          const title = item.querySelector("title").textContent;
+          const link = item.querySelector("link").textContent;
+          const description = item.querySelector("description").textContent;
+          return { title, link, description };
+        });
+
+        displaymedBlogPosts(posts.slice(0, 3));
+      } catch (error) {
+        console.error(error);
+        document.getElementById("medblogPosts").innerHTML = "<p>Failed to fetch blog posts.</p>";
+      }
+    }
+
+    // Function to display the blog posts on the website
+    function displaymedBlogPosts(posts) {
+      const medblogPostHtml = posts.map(post => `
+        <div>
+          <h3><a href="${post.link}" target="_blank">${post.title}</a></h3>
+          <p>${post.description}</p>
+        </div>
+      `).join("");
+
+      document.getElementById("medblogPosts").innerHTML = medblogPostHtml;
+    }
+
+    // Call the function to fetch and display the blog posts
+    fetchmedBlogPosts();
+  </script>
+  <script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
 </body>
 </html>
