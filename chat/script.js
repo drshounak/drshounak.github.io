@@ -20,7 +20,7 @@ function sendMessage() {
     appendMessage('user', userMessage);
 
     // Send user message to the Cloudflare Worker
-    fetch('https://your-worker-domain.your-subdomain.workers.dev', {
+    fetch('https://https://chatbot.drshounak.workers.dev/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
