@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App Drawer</title>
+    <style>
+        body {
+            margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    background-image: url('https://images.unsplash.com/photo-1602292678572-16cb94ea0d88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60');
+    background-repeat: no-repeat;  
+    height: 100vh;
+    min-height: 100%;  
+    color: #ddd;
+    max-width: 800px;
+    justify-content: center;
+    margin: 0 auto;
+        }
+
+        .header {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .app-row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .app-card {
+            background-color: rgba(30, 30, 30, 0.4);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            padding: 20px;
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .app-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            
+        }
+
+        .app-name {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .app-description {
+            font-size: 1em;
+            line-height: 1.3;
+        }
+        h1 {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>My App Drawer</h1>
+    </div>
+
+    <div class="app-row">
+        <div class="app-card" onclick="window.location.href='https://smartgoat.me/nnw/'">
+            <img class="app-logo" src="https://cdn-cf.shounak.in/WhatsApp.svg" alt="NNW Logo">
+            <div class="app-name">NNW</div>
+            <div class="app-description">
+                NNW- WhatsApp without saving contact.
+            </div>
+        </div>
+
+        <div class="app-card" onclick="window.location.href='https://smartgoat.me/ipchecker/'">
+            <img class="app-logo" src="https://cdn-cloudflare.smartgoat.me/ipcheckerlogo.png" alt="IPChecker Logo">
+            <div class="app-name">IPChecker</div>
+            <div class="app-description">
+                Check Ip Adress, DNS lookup<br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="app-row">
+        <div class="app-card" onclick="window.location.href='https://smartgoat.me/speedtest/'">
+            <img class="app-logo" src="https://smartgoat.me/speedtest/icon-193x193.svg" alt="Speed Test Logo">
+            <div class="app-name">Internet Speed test</div>
+            <div class="app-description">
+                Test Your Internet Speed .
+            </div>
+        </div>
+
+        <div class="app-card">
+            <img class="app-logo" src="https://play-lh.googleusercontent.com/VPqK75BwKMtTDFF6UQS6E3GYdYqzvZfddDxoKRH-DSlXIcYLN_EeSy5OXKx0bhBTtLUU" alt="ToDoist Logo">
+            <div class="app-name">ToDoist</div>
+            <div class="app-description">
+                Simple todolist.
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- Add more app card pairs as needed -->
+</body>
+
+              </html>
+              
