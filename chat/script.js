@@ -1,42 +1,41 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const chatMessages = document.getElementById('chat-messages');
-  const userInput = document.getElementById('user-input');
-  const sendButton = document.getElementById('send-button');
+function appendMessage(role, content) {
+    const chatBox = document.getElementById('chat-box');
+    const messageDiv = document.createElement('div');
+    messageDiv.className = role;
+    messageDiv.textContent = content;
+    chatBox.appendChild(messageDiv);
 
-  sendButton.addEventListener('click', function() {
-    const userMessage = userInput.value;
-    if (userMessage.trim() === '') return;
+    // Scroll to the bottom of the chat box
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
 
-    // Display user message
+function sendMessage() {
+    const userInput = document.getElementById('user-input');
+    const userMessage = userInput.value.trim();
+
+    if (userMessage === '') {
+        return;
+    }
+
     appendMessage('user', userMessage);
 
-    // Send user message to the server and get response
-    fetchChatbotResponse(userMessage);
-    
-    // Clear input field
+    // Send user message to the Cloudflare Worker
+    fetch('https://your-worker-domain.your-subdomain.workers.dev', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ message: userMessage })
+    })
+    .then(response => response.text())
+    .then(data => {
+        // Display the chatbot's response
+        appendMessage('bot', data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+    // Clear the user input field
     userInput.value = '';
-  });
-
-  function appendMessage(role, content) {
-    const messageDiv = document.createElement('div');
-    messageDiv.className = `message ${role}`;
-    messageDiv.textContent = content;
-    chatMessages.appendChild(messageDiv);
-
-    // Scroll to the bottom of the chat container
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  }
-
-  async function fetchChatbotResponse(userMessage) {
-    try {
-      const response = await fetch(`https://chat-backend.shounak.in/chat?message=${encodeURIComponent(userMessage)}`);
-      const data = await response.json();
-      const chatbotResponse = data.response;
-
-      // Display chatbot response
-      appendMessage('chatbot', chatbotResponse);
-    } catch (error) {
-      console.error('Error fetching chatbot response:', error);
-    }
-  }
-});
+}
