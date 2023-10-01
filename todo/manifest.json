@@ -1,0 +1,14 @@
+{
+      "name": "Todos by Shounak",
+      "short_name": "Todos",
+      "description": "Daily ToDo List",
+      "start_url": "/",
+      "display": "standalone",
+      "background_color": "#ffffff",
+      "theme_color": "#E7FCDC",
+      "icons": [{
+          "src": "https://play-lh.googleusercontent.com/VPqK75BwKMtTDFF6UQS6E3GYdYqzvZfddDxoKRH-DSlXIcYLN_EeSy5OXKx0bhBTtLUU",
+          "sizes": "192x192",
+          "type": "image/png"
+      }]
+  }
