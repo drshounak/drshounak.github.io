@@ -52,9 +52,10 @@ function restartGame() {
 
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
+const themeColorMetaTag = document.querySelector('meta[name=theme-color]');
 
 darkModeToggle.addEventListener('change', () => {
-    body.classList.toggle('dark-mode', darkModeToggle.checked);
+    const isDarkMode = darkModeToggle.checked;
+    body.classList.toggle('dark-mode', isDarkMode);
+    themeColorMetaTag.content = isDarkMode ? '#000000' : '#ffffff';
 });
-
-
