@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -33,6 +34,16 @@
         </div>
         <button onclick="restartGame()" class="restart-button">Restart Game</button>
     </div>
+    <br>
+    <div class="footer">
+    <div class="footer-content">
+      <p style="font-size: 14px;font-family: 'Roboto Mono', monospace;">&copy; <span id="current-year"></span> <a href="https://shounak.in/" target="_blank" rel="noopener noreferrer">Shounak Pal</a> | <a href="https://smartgoat.me/" target="_blank" rel="noopener noreferrer">The SmartGoat Blog</a></p>
+    </div>
+  </div>
+  <script>
+    var currentYear = new Date().getFullYear();
+    $("#current-year").text(currentYear);
+  </script>
     <script src="script.js">
         
     </script>
