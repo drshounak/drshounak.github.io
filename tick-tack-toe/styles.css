@@ -115,6 +115,12 @@ body.dark-mode {
     border-radius: 50%;
 }
 
+#mode-text {
+    font-size: 12px;
+    color: #007bff;
+    margin-top: 13px;
+}
+
 input:checked + .slider {
     background-color: #007bff;
 }
