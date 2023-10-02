@@ -123,4 +123,17 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(26px);
   }
+.footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 14px;
+      font-family: 'Arial';
+      color: #007bff;
+    }
 
+    .footer a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 14px;
+      font-family: 'Arial';
+    }
