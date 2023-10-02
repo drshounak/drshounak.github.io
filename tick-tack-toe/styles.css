@@ -123,11 +123,24 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(26px);
   }
+.footer {
+      background: transparent;
+      color: #007bff;
+      text-align: center;
+      padding: 5px;
+      position: fixed-bottom;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 12px;
+      font-family: 'Arial', sans-serif;
+}
 .footer-content {
       max-width: 600px;
       margin: 0 auto;
       font-size: 14px;
-      font-family: 'Arial';
+      font-family: 'Arial', sans-serif;
       color: #007bff;
     }
 
@@ -135,5 +148,5 @@ input:checked + .slider:before {
       color: #007bff;
       text-decoration: none;
       font-size: 14px;
-      font-family: 'Arial';
+      font-family: 'Arial', sans-serif;
     }
