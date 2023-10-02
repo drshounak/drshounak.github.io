@@ -29,9 +29,25 @@ function makeMove(square) {
         document.querySelectorAll('.cell')[square].textContent = currentPlayer;
         const winner = checkWinner();
         if (winner) {
+            // Update the winner notification message
+            const winnerNotification = document.getElementById('winner-notification');
+            winnerNotification.textContent = `Player ${winner} Wins!`;
+
+            // Show the winner notification
+            winnerNotification.style.display = 'block';
+
+            // Hide the winner notification after 3 seconds
+            setTimeout(() => {
+                winnerNotification.style.display = 'none';
+            }, 3000);
+
+            // Update the main message element
             document.getElementById('message').textContent = `Player ${winner} wins!`;
         } else if (board.every(square => typeof square === 'string')) {
+            // Update the draw notification message
             document.getElementById('message').textContent = 'It\'s a draw!';
+
+            // You can also add a draw notification here if you want
         } else {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         }
