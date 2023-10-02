@@ -127,7 +127,7 @@ input:checked + .slider:before {
       color: #007bff;
       text-align: center;
       padding: 5px;
-      position: fixed-bottom;
+      position: fixed;
       left: 0;
       bottom: 0;
       width: 100%;
