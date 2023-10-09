@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner Index</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .subdomain-links {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-left: 30px;
+        }
+
+        .subdomain-links li {
+            margin: 10px 0;
+        }
+
+        .subdomain-links a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        .subdomain-links a:hover {
+            color: #0056b3;
+        }
+
+        .search-bar {
+            margin-top: 20px;
+        }
+
+        .search-input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Study Planner Index</h1>
+        <p>Access your study planners for different subjects:</p>
+        <div class="search-bar">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search subjects...">
+        </div>
+        <ul class="subdomain-links" id="subdomainList">
+            <li><a href="https://anat.aptod.com">Anatomy</a></li>
+            <li><a href="https://physio.aptod.com">Physiology</a></li>
+            <li><a href="https://biochem.aptod.com">Biochemistry</a></li>
+            <li><a href="https://patho.aptod.com">Pathology</a></li>
+            <li><a href="https://pharma.aptod.com">Pharmacology</a></li>
+            <li><a href="https://forensic.aptod.com">Forensic Medicine</a></li>
+            <li><a href="https://micro.aptod.com">Microbiology</a></li>
+            <li><a href="https://psm.aptod.com">Community Medicine (PSM)</a></li>
+            <li><a href="https://ophtha.aptod.com">Ophthalmology</a></li>
+            <li><a href="https://ent.aptod.com">ENT (Otorhinolaryngology)</a></li>
+            <li><a href="https://medicine.aptod.com">Medicine</a></li>
+            <li><a href="https://surgery.aptod.com">Surgery</a></li>
+            <li><a href="https://paedia.aptod.com">Pediatrics (Paediatrics)</a></li>
+            <li><a href="https://obgyn.aptod.com">Obstetrics and Gynecology (OBGYN)</a></li>
+            <li><a href="https://radio.aptod.com">Radiology</a></li>
+            <li><a href="https://psychi.aptod.com">Psychiatry</a></li>
+            <li><a href="https://anasthesia.aptod.com">Anesthesiology</a></li>
+            <li><a href="https://derma.aptod.com">Dermatology</a></li>
+            <li><a href="https://ortho.aptod.com">Orthopedics</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // Filter subjects based on search input
+        const searchInput = document.getElementById('searchInput');
+        const subdomainList = document.getElementById('subdomainList');
+
+        searchInput.addEventListener('input', function () {
+            const searchTerm = searchInput.value.toLowerCase();
+            const subdomains = subdomainList.getElementsByTagName('li');
+
+            for (const subdomain of subdomains) {
+                const subdomainName = subdomain.textContent.toLowerCase();
+                if (subdomainName.includes(searchTerm)) {
+                    subdomain.style.display = 'block';
+                } else {
+                    subdomain.style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
