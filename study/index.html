@@ -28,6 +28,7 @@
     <meta name="twitter:image" content="https://media.istockphoto.com/id/1219505637/vector/book-and-student-global-study-education-logo-vector-sign-symbol.jpg?s=170667a&w=0&k=20&c=oDQrB5wEfk2Ly9R-ti7AhTRGDz5HGSFi4-5nR_MK8P8=">
 
     <!-- Favicon: Icon displayed in the browser tab -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="icon" href="https://media.istockphoto.com/id/1219505637/vector/book-and-student-global-study-education-logo-vector-sign-symbol.jpg?s=170667a&w=0&k=20&c=oDQrB5wEfk2Ly9R-ti7AhTRGDz5HGSFi4-5nR_MK8P8=" type="image/png">
     
     <style>
@@ -88,10 +89,57 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        .top-right-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffcccc; /* Change this color to your preferred cute color */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  #date-month {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+        .footer {
+      background: transparent;
+      color: #007bff;
+      text-align: center;
+      padding: 5px;
+      position: bottom;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 12px;
+      font-family: 'Arial', sans-serif;
+}
+.footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 14px;
+      font-family: 'Arial', sans-serif;
+      color: #007bff;
+    }
+
+    .footer a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 14px;
+      font-family: 'Arial', sans-serif;
+    }
     </style>
 </head>
 
 <body>
+    <div class="top-right-box">
+      <p id="date-month">Date Month</p>
+    </div>
+    <br>
+    <br>
     <div class="container">
         <h1>Welcome to Study Planner Index</h1>
         <p>Access your study planners for different subjects:</p>
@@ -120,6 +168,16 @@
             <li><a href="https://ortho.aptod.com">Orthopedics</a></li>
         </ul>
     </div>
+    <br>
+    <div class="footer">
+      <div class="footer-content">
+        <p style="font-size: 14px;font-family: 'Roboto Mono', monospace;">&copy; <span id="current-year"></span> <a href="https://shounak.in/" target="_blank" rel="noopener noreferrer">Shounak Pal</a> | <a href="https://smartgoat.me/" target="_blank" rel="noopener noreferrer">The SmartGoat Blog</a></p>
+      </div>
+    </div>
+    <script>
+      var currentYear = new Date().getFullYear();
+      $("#current-year").text(currentYear);
+    </script>
 
     <script>
         // Filter subjects based on search input
@@ -139,6 +197,17 @@
                 }
             }
         });
+    </script>
+    <script>
+      // Function to get the current date and month
+      function getCurrentDateMonth() {
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return today.toLocaleDateString('en-US', options);
+      }
+    
+      // Update the content of the date-month element
+      document.getElementById('date-month').textContent = getCurrentDateMonth();
     </script>
 </body>
 
