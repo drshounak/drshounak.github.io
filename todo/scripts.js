@@ -2,7 +2,7 @@
 function hashPassword(password) {
     try {
         const salt = 'yCom20';
-        const hashedPassword = crypto.createHash('sha256').update(password + salt).digest('hex');
+        const hashedPassword = crypto.createHash('sha256').update(password).digest('hex');
         return hashedPassword;
     } catch (error) {
         console.error('Error hashing password:', error);
