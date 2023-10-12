@@ -13,7 +13,7 @@ document.getElementById('login').addEventListener('click', function() {
     var hashedPassword = hashPassword(inputPassword); // Hash the input password
 
     // Replace 'hashedPassword' with the actual hashed password stored in your database
-    if (username === 'Sonu' && hashedPassword === '1ebbc23077') {
+    if (username === 'Sonu' && hashedPassword === 'cf7ea2fbb') {
         // Store the login status in sessionStorage
         sessionStorage.setItem('loggedIn', 'true');
         document.getElementById('login-screen').style.display = 'none';
