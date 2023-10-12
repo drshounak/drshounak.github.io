@@ -2,7 +2,7 @@ document.getElementById('login').addEventListener('click', function() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
 
-    if (username === 'Sonu' && password === 'Icisidhu') {
+    if (username === 'Sonu' && password === 'Ici-12sidhu') {
         // Store the login status in sessionStorage
         sessionStorage.setItem('loggedIn', 'true');
         document.getElementById('login-screen').style.display = 'none';
