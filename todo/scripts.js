@@ -1,30 +1,26 @@
-function hashPassword(password) {
-    var hash = 0, i, chr;
-    for (i = 0; i < password.length; i++) {
-        chr   = password.charCodeAt(i);
-        hash  = (hash << 5) - hash + chr;
-    }
-    return hash.toString(16);
-}
+// Predetermined hashed password (example value)
+var predeterminedHashedPassword = '389e2e80402d074dea02cc7f699ade628e44295550bbc4813ea1d77d18aa5728'; // Replace this with your actual predetermined hashed password
 
 document.getElementById('login').addEventListener('click', function() {
     var username = document.getElementById('username').value;
     var inputPassword = document.getElementById('password').value;
-    var hashedPassword = hashPassword(inputPassword); // Hash the input password
+    var hashedPassword = CryptoJS.SHA256(inputPassword).toString(); // Hash the input password using SHA-256
 
-    // Replace 'hashedPassword' with the actual hashed password stored in your database
-    if (username === 'Sonu' && hashedPassword === 'cf7ea2fbb') {
-        // Store the login status in sessionStorage
+    // Compare the hashed password with the predetermined hashed password
+    if (username === 'Sonu' && hashedPassword === predeterminedHashedPassword) {
+        // Store the login status in session storage
         sessionStorage.setItem('loggedIn', 'true');
         document.getElementById('login-screen').style.display = 'none';
         document.getElementById('content').style.display = 'block';
     } else {
         alert('Invalid credentials. Please try again.');
     }
+
+    // Rest of your login logic
 });
 
-// Check if the user is already logged in
 document.addEventListener('DOMContentLoaded', function() {
+    // Check if the user is already logged in
     var isLoggedIn = sessionStorage.getItem('loggedIn');
     if (isLoggedIn === 'true') {
         document.getElementById('login-screen').style.display = 'none';
