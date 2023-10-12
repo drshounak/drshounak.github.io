@@ -17,7 +17,7 @@ document.getElementById('login').addEventListener('click', function() {
     var hashedInputPassword = hashPassword(password);
 
     // Compare hashed input password with stored hashed password
-    if (username === 'Sonu' && hashedInputPassword === '37729a49cb919e2a75dbaa2f252a4a3de728d358db450f1d7bd433a02147d00b') {
+    if (username === 'Sonu' && hashedInputPassword === 'f1e318288618296fda1b37e87b63e33effbddc45b25e605646acfcb1ab21b4b4') {
         // Store the login status in sessionStorage
         sessionStorage.setItem('loggedIn', 'true');
         document.getElementById('login-screen').style.display = 'none';
