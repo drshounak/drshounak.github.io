@@ -1,5 +1,5 @@
 // Predetermined hashed password (example value)
-var predeterminedHashedPassword = '389e2e80402d074dea02cc7f699ade628e44295550bbc4813ea1d77d18aa5728'; // Replace this with your actual predetermined hashed password
+var predeterminedHashedPassword = '27335363faec9e8430281a6615cc1a893162459f563f9c8842234783d4daa413'; // Replace this with your actual predetermined hashed password
 
 document.getElementById('login').addEventListener('click', function() {
     var username = document.getElementById('username').value;
