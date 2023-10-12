@@ -1,10 +1,14 @@
 // Function to hash passwords
 function hashPassword(password) {
-    const salt = 'yCom20'; // Replace this with a unique salt value
-    const hashedPassword = crypto.createHash('sha256').update(password + salt).digest('hex');
-    return hashedPassword;
+    try {
+        const salt = 'yCom20';
+        const hashedPassword = crypto.createHash('sha256').update(password + salt).digest('hex');
+        return hashedPassword;
+    } catch (error) {
+        console.error('Error hashing password:', error);
+        return null;
+    }
 }
-
 document.getElementById('login').addEventListener('click', function() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
