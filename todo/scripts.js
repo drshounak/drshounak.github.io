@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('login-screen').style.display = 'none';
             document.getElementById('content').style.display = 'block';
 
-            // Start the auto logout timer (Sunday at 11:30 pm)
+            // Start the auto logout timer (every Sunday at 11:30 pm)
             startAutoLogoutTimer();
         } else {
             // Increment login attempts
@@ -50,71 +50,97 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Rest of your code...
-});
+    // Center the login screen
+    var loginScreen = document.getElementById('login-screen');
+    loginScreen.style.position = 'fixed';
+    loginScreen.style.top = '50%';
+    loginScreen.style.left = '50%';
+    loginScreen.style.transform = 'translate(-50%, -50%)';
 
-// Function to handle login and session management
-function handleLogin() {
-    // Set expiration time to 7 days from now
-    var expirationDate = new Date();
-    expirationDate.setDate(expirationDate.getDate() + 7);
+    // Check if the user is already logged in and display the appropriate content
+    var isLoggedIn = localStorage.getItem('loggedIn');
+    var expirationTime = parseInt(localStorage.getItem('expirationDate'));
 
-    // Store login status and expiration time in localStorage
-    localStorage.setItem('loggedIn', 'true');
-    localStorage.setItem('expirationDate', expirationDate.getTime());
-
-    // Refresh last login attempt timestamp after 1 week (7 days)
-    setTimeout(function() {
-        lastLoginAttemptTimestamp = new Date();
-    }, 7 * 24 * 60 * 60 * 1000); // 7 days in milliseconds
-}
-
-// Function to check if login attempts are allowed
-function canAttemptLogin() {
-    // If no login attempts or less than 5 attempts, allow login
-    if (loginAttempts < 5) {
-        return true;
+    if (isLoggedIn === 'true' && expirationTime && expirationTime > Date.now()) {
+        // User is already logged in and the session is still valid, so display the content
+        document.getElementById('login-screen').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+    } else {
+        // User is not logged in or the session has expired, show the login screen
+        document.getElementById('login-screen').style.display = 'block';
+        document.getElementById('content').style.display = 'none';
     }
 
-    // If it has been more than 1 hour since the last login attempt, allow login
-    var currentTime = new Date();
-    if (lastLoginAttemptTimestamp && currentTime - lastLoginAttemptTimestamp > 60 * 60 * 1000) {
-        // Reset login attempts and last login attempt timestamp
-        loginAttempts = 0;
-        lastLoginAttemptTimestamp = null;
-        return true;
-    }
-
-    // Login attempts are restricted
-    return false;
-}
-
-// Function to disable the login button for 1 hour
-function disableLoginButtonForOneHour() {
-    document.getElementById('login').disabled = true;
-    setTimeout(function() {
-        // Enable the login button after 1 hour
-        document.getElementById('login').disabled = false;
-    }, 60 * 60 * 1000); // 1 hour in milliseconds
-}
-
-// Function to start the auto logout timer (every Sunday at 11:30 pm)
-function startAutoLogoutTimer() {
-    setInterval(function() {
-        var today = new Date();
-        if (today.getDay() === 0 && today.getHours() === 23 && today.getMinutes() === 30) {
-            // It's Sunday at 11:30 pm, log out the user
-            logoutUser();
+    // Function to handle login and session management
+    function handleLogin() {
+        // Set expiration time to 7 days from now or Sunday at 11:30 pm, whichever comes first
+        var expirationDate = new Date();
+        var currentDay = expirationDate.getDay();
+        if (currentDay === 0) {
+            // If today is Sunday, set expiration time to 11:30 pm
+            expirationDate.setHours(23, 30, 0, 0);
+        } else {
+            // Set expiration time to 7 days from now
+            expirationDate.setDate(expirationDate.getDate() + 7);
         }
-    }, 60000); // Check every minute (60 seconds * 1000 milliseconds)
-}
 
-// Function to log out the user
-function logoutUser() {
-    localStorage.removeItem('loggedIn');
-    localStorage.removeItem('expirationDate');
-    document.getElementById('login-screen').style.display = 'block';
-    document.getElementById('content').style.display = 'none';
-    alert('You have been logged out due to session expiration.');
-}
+        // Store login status and expiration time in localStorage
+        localStorage.setItem('loggedIn', 'true');
+        localStorage.setItem('expirationDate', expirationDate.getTime());
 
+        // Refresh last login attempt timestamp after 1 week (7 days)
+        setTimeout(function() {
+            lastLoginAttemptTimestamp = new Date();
+        }, 7 * 24 * 60 * 60 * 1000); // 7 days in milliseconds
+    }
+
+    // Function to check if login attempts are allowed
+    function canAttemptLogin() {
+        // If no login attempts or less than 5 attempts, allow login
+        if (loginAttempts < 5) {
+            return true;
+        }
+
+        // If it has been more than 1 hour since the last login attempt, allow login
+        var currentTime = new Date();
+        if (lastLoginAttemptTimestamp && currentTime - lastLoginAttemptTimestamp > 60 * 60 * 1000) {
+            // Reset login attempts and last login attempt timestamp
+            loginAttempts = 0;
+            lastLoginAttemptTimestamp = null;
+            return true;
+        }
+
+        // Login attempts are restricted
+        return false;
+    }
+
+    // Function to disable the login button for 1 hour
+    function disableLoginButtonForOneHour() {
+        document.getElementById('login').disabled = true;
+        setTimeout(function() {
+            // Enable the login button after 1 hour
+            document.getElementById('login').disabled = false;
+        }, 60 * 60 * 1000); // 1 hour in milliseconds
+    }
+
+    // Function to start the auto logout timer (every Sunday at 11:30 pm)
+    function startAutoLogoutTimer() {
+        setInterval(function() {
+            var today = new Date();
+            if (today.getDay() === 0 && today.getHours() === 23 && today.getMinutes() === 30) {
+                // It's Sunday at 11:30 pm, log out the user
+                logoutUser();
+            }
+        }, 60000); // Check every minute (60 seconds * 1000 milliseconds)
+    }
+
+    // Function to log out the user
+    function logoutUser() {
+        localStorage.removeItem('loggedIn');
+        localStorage.removeItem('expirationDate');
+        document.getElementById('login-screen').style.display = 'block';
+        document.getElementById('content').style.display = 'none';
+        alert('You have been logged out due to session expiration.');
+    }
+});
+            
