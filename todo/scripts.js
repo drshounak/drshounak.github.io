@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Check if the user is attempting to log in too frequently
         if (!canAttemptLogin()) {
             // Display a message to the user indicating login attempts are restricted
-            alert('Login attempts are restricted. Please try again later.');
+            alert('You tried too hard buddy you can just ask for it if you know who to ask.');
             return;
         }
 
@@ -40,12 +40,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Check if the maximum login attempts (5) is reached
             if (loginAttempts >= 5) {
                 // Display a message to the user indicating login attempts exceeded
-                alert('Maximum login attempts exceeded. Further attempts are restricted for 1 hour.');
+                alert('Wow you have managed to exceed max login attempts. Sorry buddy Further attempts are restricted for 1 hour.');
                 // Disable login button for 1 hour
                 disableLoginButtonForOneHour();
             } else {
                 // Display an error message for incorrect credentials
-                alert('Invalid credentials. Please try again. Attempt ' + loginAttempts + ' out of 5.');
+                alert('Invalid credentials. Do you even know the password ? If no, you can just ask for it. Attempt ' + loginAttempts + ' out of 5.');
             }
         }
     });
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.removeItem('expirationDate');
         document.getElementById('login-screen').style.display = 'block';
         document.getElementById('content').style.display = 'none';
-        alert('You have been logged out due to session expiration.');
+        alert('Sunday Funday, yeeeh. You have worked hard buddy. Get some sleep.');
     }
 });
             
