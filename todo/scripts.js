@@ -21,6 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Center the login screen
+    var loginScreen = document.getElementById('login-screen');
+    loginScreen.style.position = 'fixed';
+    loginScreen.style.top = '50%';
+    loginScreen.style.left = '50%';
+    loginScreen.style.transform = 'translate(-50%, -50%)';
+
     // Check if the user is already logged in and display the appropriate content
     var isLoggedIn = localStorage.getItem('loggedIn');
     var expirationTime = parseInt(localStorage.getItem('expirationDate'));
