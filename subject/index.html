@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Canonical Tag: Specifies the preferred version of the URL in case of duplicate or similar content -->
+    <link rel="canonical" href="https://www.aptod.com/">
+
+    
+    <!-- Favicon: Icon displayed in the browser tab -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="manifest" href="manifest.json" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .subdomain-links {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-left: 30px;
+        }
+
+        .subdomain-links li {
+            margin: 10px 0;
+        }
+
+        .subdomain-links a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        .subdomain-links a:hover {
+            color: #0056b3;
+        }
+
+        .search-bar {
+            margin-top: 20px;
+        }
+
+        .search-input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .top-right-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffcccc; /* Change this color to your preferred cute color */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  #date-month {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+        .footer {
+      background: transparent;
+      color: #007bff;
+      text-align: center;
+      padding: 5px;
+      position: bottom;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 12px;
+      font-family: 'Arial', sans-serif;
+}
+.footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 14px;
+      font-family: 'Arial', sans-serif;
+      color: #007bff;
+    }
+
+    .footer a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 14px;
+      font-family: 'Arial', sans-serif;
+    }
+    .install-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.install-button:hover {
+    background-color: #45a049;
+}
+ @media all and (display-mode: standalone) {
+  .install-button {
+    display: none;
+  }
+ }        
+        
+    </style>
+</head>
+
+<body>
+    <button id="buttonInstall" class="install-button">Install App</button>
+    <div class="top-right-box">
+      <p id="date-month">Date Month</p>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <h1>Welcome to Study Planner Index</h1>
+        <p>Access your study planners for different subjects:</p>
+        <div class="search-bar">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search subjects...">
+        </div>
+        <ul class="subdomain-links" id="subdomainList">
+            <li><a href="https://anat.drsp.org">Anatomy</a></li>
+            <li><a href="https://physio.drsp.org">Physiology</a></li>
+            <li><a href="https://bio.drsp.org">Biochemistry</a></li>
+            <li><a href="https://patho.drsp.org">Pathology</a></li>
+            <li><a href="https://pharma.drsp.org">Pharmacology</a></li>
+            <li><a href="https://fmt.drsp.org">Forensic Medicine</a></li>
+            <li><a href="https://micro.drsp.org">Microbiology</a></li>
+            <li><a href="https://psm.drsp.org">Community Medicine (PSM)</a></li>
+            <li><a href="https://eye.drsp.org">Ophthalmology</a></li>
+            <li><a href="https://ent.drsp.org">ENT (Otorhinolaryngology)</a></li>
+            <li><a href="https://med.drsp.org">Medicine</a></li>
+            <li><a href="https://surg.drsp.org">Surgery</a></li>
+            <li><a href="https://paed.drsp.org">Pediatrics (Paediatrics)</a></li>
+            <li><a href="https://obg.drsp.org">Obstetrics and Gynecology (OBGYN)</a></li>
+            <li><a href="https://radio.drsp.org">Radiology</a></li>
+            <li><a href="https://psychi.drsp.org">Psychiatry</a></li>
+            <li><a href="https://anas.drsp.org">Anesthesiology</a></li>
+            <li><a href="https://der.drsp.org">Dermatology</a></li>
+            <li><a href="https://or.drsp.org">Orthopedics</a></li>
+        </ul>
+    </div>
+    <br>
+    <div class="footer">
+      <div class="footer-content">
+        <p style="font-size: 14px;font-family: 'Roboto Mono', monospace;">&copy; <span id="current-year"></span> <a href="https://shounak.in/" target="_blank" rel="noopener noreferrer">Shounak Pal</a> | <a href="https://www.medblogs.org/" target="_blank" rel="noopener noreferrer">The MedBlogs</a></p>
+      </div>
+    </div>
+    <script>
+      var currentYear = new Date().getFullYear();
+      $("#current-year").text(currentYear);
+    </script>
+
+    <script>
+        // Filter subjects based on search input
+        const searchInput = document.getElementById('searchInput');
+        const subdomainList = document.getElementById('subdomainList');
+
+        searchInput.addEventListener('input', function () {
+            const searchTerm = searchInput.value.toLowerCase();
+            const subdomains = subdomainList.getElementsByTagName('li');
+
+            for (const subdomain of subdomains) {
+                const subdomainName = subdomain.textContent.toLowerCase();
+                if (subdomainName.includes(searchTerm)) {
+                    subdomain.style.display = 'block';
+                } else {
+                    subdomain.style.display = 'none';
+                }
+            }
+        });
+    </script>
+    <script>
+      // Function to get the current date and month
+      function getCurrentDateMonth() {
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return today.toLocaleDateString('en-US', options);
+      }
+    
+      // Update the content of the date-month element
+      document.getElementById('date-month').textContent = getCurrentDateMonth();
+    </script>
+    <script>
+        window.addEventListener('beforeinstallprompt', (event) => {
+          event.preventDefault();
+          const installButton = document.getElementById('buttonInstall');
+          installButton.style.display = 'block';
+          
+          installButton.addEventListener('click', () => {
+            event.prompt();
+            installButton.style.display = 'none';
+          });
+        });
+    </script>
+</body>
+
+</html>
