@@ -2,7 +2,7 @@
   "name": "Study Planner For Neet PG, NEXT Exam",
   "short_name": "PG Study Planner",
   "description": "A custom built study planner for neet pg NEXT exam and MBBS study prep for indian medical graduate",
-  "start_url": "/",
+  "start_url": "/subject",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007bff",
