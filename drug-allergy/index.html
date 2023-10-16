@@ -154,6 +154,27 @@ if(window.top != window.self){
             justify-content: center;
         }
 
+        .none {
+    color: green; /* None status is green */
+            font-weight: bold;
+}
+
+.moderate {
+    font-weight: bold;
+    color: red; /* Moderate status is red */
+}
+
+.severe {
+    font-weight: bold;
+    color: red; /* Severe status is also red */
+}
+
+.mild {
+    font-weight: bold;
+    color: blue; /* Mild status is blue */
+}
+
+
         /* Styles for the autocomplete suggestions */
         #autocomplete-container {
             position: relative;
@@ -200,7 +221,7 @@ if(window.top != window.self){
 </head>
 <body>
     <header>
-        <h1>Drug Allergy List - Severe</h1>
+        <h1>Drug Allergy List</h1>
     </header>
     <br>
     
@@ -259,47 +280,47 @@ if(window.top != window.self){
                         <!-- Add your drug allergies here as table rows -->
                         <tr>
                             <td>Nimesulide</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Etoricoxib</td>
-                            <td>Mild</td>
+                            <td class="mild">Mild</td>
                         </tr>
                         <tr>
                             <td>Aspirin</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Keterolac</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Paracetamol</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Aceclofenac</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Tramadol</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Analgin</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Piroxicam</td>
-                            <td>Mild</td>
+                            <td class="mild">Mild</td>
                         </tr>
                         <tr>
                             <td>Ibuprofen</td>
-                            <td>Severe</td>
+                            <td class="severe">Severe</td>
                         </tr>
                         <tr>
                             <td>Diclofenac</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         
                         <!-- Add more drugs and their allergy statuses as needed -->
@@ -322,151 +343,151 @@ if(window.top != window.self){
                         <!-- Add your drug allergies here as table rows -->
                         <tr>
                             <td>Tetracycline</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Gatifloxacin</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Levofloxacin</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Ofloxacin</td>
-                            <td>Mild</td>
+                            <td class="mild">Mild</td>
                         </tr>
                         <tr>
                             <td>Sparfloxacin</td>
-                            <td>Mild</td>
+                            <td class="mild">Mild</td>
                         </tr>
                         <tr>
                             <td>Chloramphenicol</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Cefadroxyl</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Cefaclor</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Cefpodixime</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Lomefloxacin</td>
-                            <td>Mild</td>
+                            <td class="mild">Mild</td>
                         </tr>
                         <tr>
                             <td>Cefotaxime</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Gentamicin</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Cefuroxime</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Ciprofloxacin</td>
-                            <td>Severe</td>
+                            <td class="severe">Severe</td>
                         </tr>
                         <tr>
                             <td>Norfloxacin</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Amoxycillin</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Ampicillin</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Oxytetracycline</td>
-                            <td>Mild</td>
+                            <td class="mild">Mild</td>
                         </tr>    
                         <tr>
                             <td>Clindamycin</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Amikacin</td>
-                            <td>Mild</td>
+                            <td class="mild">Mild</td>
                         </tr>
                         <tr>
                             <td>Moxyfloxacin</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Doxycycline</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Cotrimoxazole</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Penicillin</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Azithromycin</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Clarithromycin</td>
-                            <td>Severe</td>
+                            <td class="severe">Severe</td>
                         </tr>
                         <tr>
                             <td>Feropenem</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Roxythromycin</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Erythromycin</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Lincomycin</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Cefdinir</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Gemifloxacin</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Cephalexin</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Cefixim</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Purifloxcin</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Nitrofurantoin</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Ceftriaxone</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <!-- Add more drugs and their allergy statuses as needed -->
                     </tbody>
@@ -488,75 +509,75 @@ if(window.top != window.self){
                         <!-- Add your drug allergies here as table rows -->
                         <tr>
                             <td>Bupivacaine</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Lignocaine</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Lansoprazole</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Ornidazole</td>
-                            <td>Severe</td>
+                            <td class="severe">Severe</td>
                         </tr>
                         <tr>
                             <td>Rabeprazole</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Pantoprazole</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Omeprazole</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Famotidine</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Satrogyl</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Metclopramide</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Ranitidine</td>
-                            <td>Severe</td>
+                            <td class="severe">Severe</td>
                         </tr>
                         <tr>
                             <td>Ondancetron</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Metronidazole</td>
-                            <td>Mild</td>
+                            <td class="mild">Mild</td>
                         </tr>
                         <tr>
                             <td>Tinidazole</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Secnidazole</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Albendazole</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Domperidone</td>
-                            <td>Mild</td>
+                            <td class="mild">Mild</td>
                         </tr>
                         <tr>
                             <td>Mebendazole</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                     </tbody>
                 </table>
@@ -577,63 +598,63 @@ if(window.top != window.self){
                         <!-- Add your drug allergies here as table rows -->
                         <tr>
                             <td>Ketotifen</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Promethazin</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Rupadinine</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Cyproheptadine</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Montelukast</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Cetrizine</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Fexofenadine</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Desloratidine</td>
-                            <td>Mild</td>
+                            <td class="mild">Mild</td>
                         </tr>
                         <tr>
                             <td>Levocetrizine</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Loraditine</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>DEC</td>
-                            <td>Morderate</td>
+                           <td class="moderate">Moderate</td>
                         </tr>
                         <tr>
                             <td>Hydroxyaine HCL</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Ebastine</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Chlorphenaramine Melate</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                         <tr>
                             <td>Bilastine</td>
-                            <td>None</td>
+                            <td class="none">None</td>
                         </tr>
                     </tbody>
                 </table>
