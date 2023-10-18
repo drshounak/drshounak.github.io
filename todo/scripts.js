@@ -71,3 +71,18 @@ function handleLogin() {
 
     // Additional logic for handling the user session can be added here
 }
+
+
+
+// Prevent form submission on "Enter" key press for submit button
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        // Check if submit button, save button, or login button is focused and prevent the default action
+        if (document.activeElement.tagName === 'BUTTON' && 
+            (document.activeElement.id === 'create' || 
+             document.activeElement.id === 'confirmEditBtn' || 
+             document.activeElement.id === 'login')) {
+            event.preventDefault();
+        }
+    }
+});
