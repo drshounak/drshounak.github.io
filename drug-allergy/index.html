@@ -44,7 +44,7 @@ if(window.top != window.self){
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #fffbeb;
             margin: 0;
             padding: 0;
         }
@@ -53,7 +53,9 @@ if(window.top != window.self){
             background-color: #318235;
             color: #fff;
             text-align: center;
-            padding: 1px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            box-shadow: inset 0 0 10px #52e759;
         }
 
         main {
@@ -66,12 +68,19 @@ if(window.top != window.self){
         }
 
         h1 {
-            font-size: 28px;
+            font-size: 38px;
+            text-shadow: 2px 2px 5px #949bff;
         }
 
         h2 {
             font-size: 24px;
             margin-bottom:5px;
+            text-shadow: 2px 2px 5px #f8a100;
+        }
+
+        h3 {
+            margin-bottom:5px;
+            text-shadow: 2px 2px 5px #ffaee7;
         }
 
         ul {
@@ -97,9 +106,18 @@ if(window.top != window.self){
             background-color: #2372cc;
             color: #fff;
             border: none;
+            font-weight: bold;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
         }
         h4 a {
             color: #c03040;
@@ -240,7 +258,7 @@ if(window.top != window.self){
         </section>
         <br>
         <section>
-            <h2>Allergy Report Interpretation:</h2>
+            <h2><mark>Report Interpretation:</mark> </h2>
             <ul>
                 <li style="color: green;">No Allergy (<strong>-</strong>) : <strong>Can be administered safely</strong></li>
                 <li style="color: blue;">Mild Allergy (<strong>+/-</strong>) : <strong>Can be administered</strong>, with monitoring</li>
@@ -258,8 +276,8 @@ if(window.top != window.self){
         <section id="autocomplete-container">
             <h2>Search for a Drug:</h2>
             <input type="text" id="searchInput" placeholder="Enter drug name...">
-            <button onclick="searchDrug()">Search</button>
-            <button onclick="clearSearch()">Clear</button> 
+            <button style="margin-top: 5px;" onclick="searchDrug()">Search</button>
+            <button style="margin-top: 5px;" onclick="clearSearch()">Clear</button> 
             <ul id="autocomplete-list"></ul>
         </section>
         <br>
@@ -662,6 +680,37 @@ if(window.top != window.self){
         </section>
     </main>
     <br>
+    <br>
+    <main>
+        <h2>Patient Particulars</h2>
+        <br>
+        <ul>
+            <li><b>Name:</b> Shounak Pal</li>
+            <li><b>Age:</b> 24yrs(2023)</li>
+            <li><b>Sex:</b> Male</li>
+            <li><b>Occupation:</b> Doctor</li>
+            <li><b>Address:</b>New Alipore, Kolkata</li>
+        </ul>
+        <br>
+        <h2>Past History</h2>
+        <ul>
+            <li><b>Past Medical History:</b> No H/O HTN,DM. Known patient of bronchial Asthma, currently on Formoterol+Budesonide(sos). Previous H/O hospitalisation following Ibuprophen Intake. </li>
+            <li><b>Past Surgical History:</b> Nothing significant.</li>
+        </ul>
+        <br>
+        <h2>Personal History</h2>
+        <ul>
+            <li><b>Bowel, Bladder, Sleep, Apetite</b> : WNL</li>
+            <li><b>Addiction:</b> No history of Addictions</li>
+            <li><b>Allergy:</b> Food allergy including Eggs, Drug Allergies.</li>
+        </ul>
+        <br>
+        <br>
+        <h3>NOTE:</h3>
+        <p style="color: #591616;"><b>For Emergency Contacts Go to my phone lock screen > Press/Swipe the phone icon to right> Go to EMERGENCY CALL </b></p>
+        <button id="ring-my-phone-btn" >Ring My Phone</button>
+    </main>
+    <br>
      <div>
         <h4 style="text-align: center;">To know about me visit : <a href="https://shounak.in/">Shounak.in</a>   or   <a href="https://drshounak.com/">drshounak.com</a></h4>
      </div>
@@ -674,7 +723,18 @@ if(window.top != window.self){
 <script>
     var currentYear = new Date().getFullYear();
     $("#current-year").text(currentYear);
-  </script>    
+
+    document.getElementById('ring-my-phone-btn').addEventListener('click', function() {
+            // Reconstruct the phone number dynamically to obscure it
+            var phoneNumber = String.fromCharCode(
+                57, 52, 55, 52, 53, 56, 53, 54, 56, 53
+            ); // Decoded: +91332441139,
+
+            // Initiate a phone call when the button is clicked
+            window.location.href = 'tel:' + phoneNumber;
+        });
+
+</script>    
 
     <script>
        // JavaScript for search and other functionality
