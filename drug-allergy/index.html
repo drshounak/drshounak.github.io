@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="manifest" href="/drug-allergy/manifest.json">
+    <title>My Drug Allergy List</title>
+    <meta name="theme-color" content="#1f5f22">
+    <link rel="icon" type="image/x-icon" href="https://cdn-cf.shounak.in/shounak-favicon.svg" />
+    <link rel="canonical" href="https://shounak.in/drug-allergy/">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://code.jquery.com/jquery-3.6.0.min.js">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="2a87b69a44f40b380438837c-text/javascript"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZB4VLNYFR2" type="2a87b69a44f40b380438837c-text/javascript"></script>
+<script type="2a87b69a44f40b380438837c-text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZB4VLNYFR2');
+</script>
+<script type="2a87b69a44f40b380438837c-text/javascript">
+if (window !== window.top) {
+  // This code will be executed only if the current window is embedded within an iframe
+  // You can choose to display a message or take any other action here
+
+  // Get the URL of the parent window (the page containing the iframe)
+  var parentUrl = document.referrer;
+  
+  // Display a message along with the parent URL
+  document.body.innerHTML = "<h1>This website cannot be loaded within an iframe.</h1>" +
+                            "<h2>Parent URL:https://shounak.in/drug-allergy/</h2>";
+  
+  // Alternatively, you can redirect the user to another page:
+  // window.location.href = "https://example.com/not_in_iframe.html";
+}
+  </script>
+<script type="2a87b69a44f40b380438837c-text/javascript">
+if(window.top != window.self){
+    top.location.href = document.location.href;
+}
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="2a87b69a44f40b380438837c-text/javascript"></script>
+    <style>
+               
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+</head>
+<body>
+    <header>
+        <h1>Drug Allergy List</h1>
+    </header>
+    <br>
+    
+    <main>
+        <section>
+            <h2>Test details:</h2>
+            <ul>
+                <li>Patient Name : Shounak Pal</li>
+                <li>Report : Drug allergy</li>
+                <li>Report Date : 11/03/2015</li>
+                <li>Methode of Testing : By Skin Prick</li>
+                <li>Lab : Allergy and Asthma treatment centre</li>
+                <li><strong>NOTE :</strong> Only tested drugs included</li>
+                <li style="text-align: center; color: red; font-weight: bold; font-size: 18px;">Paracetamol, Ibuprofen, Tramadol and Many more</li>
+            </ul>
+        </section>
+        <br>
+        <section>
+            <h2><mark>Report Interpretation:</mark> </h2>
+            <ul>
+                <li style="color: green;">No Allergy (<strong>-</strong>) : <strong>Can be administered safely</strong></li>
+                <li style="color: blue;">Mild Allergy (<strong>+/-</strong>) : <strong>Can be administered</strong>, with monitoring</li>
+                <li style="color: red;">Moderate Allergy (<strong>+</strong>) : Denote marginal sensitivity, <strong>Best to avoid unless deemed absolutely necessary</strong>.</li>
+                <li style="color: red;">Severe Allergy (<strong>++,+++</strong>) : <strong>Strictly avoid</strong></li>
+            </ul>
+        </section>
+        <br>
+        
+        <secton>
+            <h3 style="color: blue; text-align: center;"><a href="https://drive.google.com/file/d/1278Yd0BYf4XRXpLRULKMoIo9XAJwFuuw/view?usp=drivesdk" download>Download the report pdf Here</a></h3>
+        </secton>
+        <br>
+
+        <section id="autocomplete-container">
+            <h2>Search for a Drug:</h2>
+            <input type="text" id="searchInput" placeholder="Enter drug name...">
+            <button style="margin-top: 5px;" onclick="searchDrug()">Search</button>
+            <button style="margin-top: 5px;" onclick="clearSearch()">Clear</button> 
+            <ul id="autocomplete-list"></ul>
+        </section>
+        <br>
+        <br>
+        <h2>My Drug Allergies</h2>
+
+        <section>
+            <p2>Analgesics</p2>
+            <div class="allergyTableContainer">
+                <table class="allergyTable" id="allergyTable">
+                    <thead>
+                        <tr>
+                            <th>Drug Name</th>
+                            <th>Allergy Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Add your drug allergies here as table rows -->
+                        <tr>
+                            <td>Nimesulide</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Etoricoxib</td>
+                            <td class="mild">Mild</td>
+                        </tr>
+                        <tr>
+                            <td>Aspirin</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Keterolac</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Paracetamol</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Aceclofenac</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Tramadol</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Analgin</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Piroxicam</td>
+                            <td class="mild">Mild</td>
+                        </tr>
+                        <tr>
+                            <td>Ibuprofen</td>
+                            <td class="severe">Severe</td>
+                        </tr>
+                        <tr>
+                            <td>Diclofenac</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        
+                        <!-- Add more drugs and their allergy statuses as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <br>        
+        <section>
+            <p2>Antibiotics</p2>
+            <div class="allergyTableContainer">
+                <table class="allergyTable" id="allergyTable">
+                    <thead>
+                        <tr>
+                            <th>Drug Name</th>
+                            <th>Allergy Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Add your drug allergies here as table rows -->
+                        <tr>
+                            <td>Tetracycline</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Gatifloxacin</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Levofloxacin</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Ofloxacin</td>
+                            <td class="mild">Mild</td>
+                        </tr>
+                        <tr>
+                            <td>Sparfloxacin</td>
+                            <td class="mild">Mild</td>
+                        </tr>
+                        <tr>
+                            <td>Chloramphenicol</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Cefadroxyl</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Cefaclor</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Cefpodixime</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Lomefloxacin</td>
+                            <td class="mild">Mild</td>
+                        </tr>
+                        <tr>
+                            <td>Cefotaxime</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Gentamicin</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Cefuroxime</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Ciprofloxacin</td>
+                            <td class="severe">Severe</td>
+                        </tr>
+                        <tr>
+                            <td>Norfloxacin</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Amoxycillin</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Ampicillin</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Oxytetracycline</td>
+                            <td class="mild">Mild</td>
+                        </tr>    
+                        <tr>
+                            <td>Clindamycin</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Amikacin</td>
+                            <td class="mild">Mild</td>
+                        </tr>
+                        <tr>
+                            <td>Moxyfloxacin</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Doxycycline</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Cotrimoxazole</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Penicillin</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Azithromycin</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Clarithromycin</td>
+                            <td class="severe">Severe</td>
+                        </tr>
+                        <tr>
+                            <td>Feropenem</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Roxythromycin</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Erythromycin</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Lincomycin</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Cefdinir</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Gemifloxacin</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Cephalexin</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Cefixim</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Purifloxcin</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Nitrofurantoin</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Ceftriaxone</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <!-- Add more drugs and their allergy statuses as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <br>
+        <section>
+            <p2>Antidiarrhoeals / OT</p2>
+            <div class="allergyTableContainer">
+                <table class="allergyTable" id="allergyTable">
+                    <thead>
+                        <tr>
+                            <th>Drug Name</th>
+                            <th>Allergy Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Add your drug allergies here as table rows -->
+                        <tr>
+                            <td>Bupivacaine</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Lignocaine</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Lansoprazole</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Ornidazole</td>
+                            <td class="severe">Severe</td>
+                        </tr>
+                        <tr>
+                            <td>Rabeprazole</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Pantoprazole</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Omeprazole</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Famotidine</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Satrogyl</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Metclopramide</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Ranitidine</td>
+                            <td class="severe">Severe</td>
+                        </tr>
+                        <tr>
+                            <td>Ondancetron</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Metronidazole</td>
+                            <td class="mild">Mild</td>
+                        </tr>
+                        <tr>
+                            <td>Tinidazole</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Secnidazole</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Albendazole</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Domperidone</td>
+                            <td class="mild">Mild</td>
+                        </tr>
+                        <tr>
+                            <td>Mebendazole</td>
+                            <td class="none">None</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <br>    
+        <section>
+            <p2>Antihistaminces</p2>
+            <div class="allergyTableContainer">
+                <table class="allergyTable" id="allergyTable">
+                    <thead>
+                        <tr>
+                            <th>Drug Name</th>
+                            <th>Allergy Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Add your drug allergies here as table rows -->
+                        <tr>
+                            <td>Ketotifen</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Promethazin</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Rupadinine</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Cyproheptadine</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Montelukast</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Cetrizine</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Fexofenadine</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Desloratidine</td>
+                            <td class="mild">Mild</td>
+                        </tr>
+                        <tr>
+                            <td>Levocetrizine</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Loraditine</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>DEC</td>
+                           <td class="moderate">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td>Hydroxyaine HCL</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Ebastine</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Chlorphenaramine Melate</td>
+                            <td class="none">None</td>
+                        </tr>
+                        <tr>
+                            <td>Bilastine</td>
+                            <td class="none">None</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <br>
+    <br>
+    <main>
+        <h2>Patient Particulars</h2>
+        <br>
+        <ul>
+            <li><b>Name:</b> Shounak Pal</li>
+            <li><b>Age:</b> 24yrs(2023)</li>
+            <li><b>Sex:</b> Male</li>
+            <li><b>Occupation:</b> Doctor</li>
+            <li><b>Address:</b>New Alipore, Kolkata</li>
+        </ul>
+        <br>
+        <h2>Past History</h2>
+        <ul>
+            <li><b>Past Medical History:</b> No H/O HTN,DM. Known patient of bronchial Asthma, currently on Formoterol+Budesonide(sos). Previous H/O hospitalisation following Ibuprophen Intake. </li>
+            <li><b>Past Surgical History:</b> Nothing significant.</li>
+        </ul>
+        <br>
+        <h2>Personal History</h2>
+        <ul>
+            <li><b>Bowel, Bladder, Sleep, Apetite</b> : WNL</li>
+            <li><b>Addiction:</b> No history of Addictions</li>
+            <li><b>Allergy:</b> Food allergy including Eggs, Drug Allergies.</li>
+        </ul>
+        <br>
+        <br>
+        <h3>NOTE:</h3>
+        <p style="color: #591616;"><b>For Emergency Contacts Go to my phone lock screen > Press/Swipe the phone icon to right> Go to EMERGENCY CALL </b></p>
+        <button id="ring-my-phone-btn" >Ring My Phone</button>
+    </main>
+    <br>
+     <div>
+        <h4 style="text-align: center;">To know about me visit : <a href="https://shounak.in/">Shounak.in</a>   or   <a href="https://drshounak.com/">drshounak.com</a></h4>
+     </div>
+
+<div class="footer">
+<div class="footer-content">
+<p>&copy; <span id="current-year"></span> <a href="https://shounak.in/" target="_blank" rel="noopener noreferrer">Shounak Pal</a></p>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
