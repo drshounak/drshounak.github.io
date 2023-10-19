@@ -11,6 +11,10 @@ var currentYear = new Date().getFullYear();
             window.location.href = 'tel:' + phoneNumber;
         });
 
+        document.getElementById("patient-particulars-button").addEventListener("click", function() {
+            document.getElementById("patient-particulars").scrollIntoView({ behavior: "smooth" });
+        });    
+
   // JavaScript for search and other functionality
 const drugList = [
     "Nimesulide",
