@@ -32,7 +32,7 @@
           font-weight: bold;
           padding: 10px;
           font-size: 70px;
-          text-shadow: 2px 2px 5px #f8a100;
+          text-shadow: 2px 2px 5px #ffae9f;
         }
     
         h2 {
@@ -247,9 +247,9 @@
       margin: 0 auto;
       text-align: center;
       padding: 5px;
-      position: bottom;
+      position: relative;
       left: 0;
-      bottom: 0;
+      bottom: 5px;
       width: 100%;
       box-sizing: border-box;
       font-size: 12px;
@@ -270,6 +270,25 @@
       font-size: 14px;
       font-family: 'Arial', sans-serif;
     }
+
+    .description-box {
+  background-color: #faf6d3;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.description-box p {
+  font-size: 14px;
+  color: #000269;
+  font-weight: bold;
+  margin: 0;
+}
+
       </style>
       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -281,6 +300,9 @@
     </head>
     <body>
       <h1>Chatty</h1>
+      <div class="description-box">
+        <p>Chatty is an AI chatbot powered by Meta's LLama model, running on Cloudfalre Workers. Have fun, just don't Abuse it to exceed my free tier limit ! - Shounak from The SmartGoat Blog</p>
+      </div>
       </br>
       <div id="response"></div>
     </br>
