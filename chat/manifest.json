@@ -1,0 +1,27 @@
+{
+    "name": "Chatty By The SmartGoat Blog",
+    "short_name": "Chatty",
+    "description": "An AI chatbot powered by Meta's LLama model.",
+    "start_url": "/chat/",
+    "display": "standalone",
+    "background_color": "#f2ffeb",
+    "theme_color": "#f6faf2",
+    "scope": "/chat/",
+    "icons": [
+      {
+        "src": "https://cdn-cloudflare.shounak.in/a-logo-with-a-very-funny-lama.jpg",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "https://cdn-cloudflare.shounak.in/a-logo-with-a-very-funny-lama.jpg",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "splash_pages": null,
+    "prefer_related_applications": false,
+    "related_applications": [],
+    "permissions": []
+  }
+  
