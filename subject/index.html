@@ -134,7 +134,19 @@
   .install-button {
     display: none;
   }
- }        
+ }  
+.logoutbtn {
+    background-color: blue; /* Change this color to your preferred cute color */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+  
+      }      
         
     </style>
 </head>
@@ -152,7 +164,7 @@
                   onclick="document.cookie ='octauthent_token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT'; location.reload()"
                 >
                   Logout
-        </button>
+      </button>
         <h1>Welcome to Study Planner Index</h1>
         <p>Access your study planners for different subjects:</p>
         <div class="search-bar">
@@ -214,8 +226,8 @@
       // Function to get the current date and month
       function getCurrentDateMonth() {
         const today = new Date();
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        return today.toLocaleDateString('en-US', options);
+        const options = { year: 'numeric', month: 'short', day: 'numeric' };
+        return today.toLocaleDateString('en-IN', options);
       }
     
       // Update the content of the date-month element
