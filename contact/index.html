@@ -12,126 +12,93 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
-    <link rel="icon" type="image/x-icon" href="https://cdn-cf.shounak.in/shounak-favicon.svg"/> 	
+    <link rel="icon" type="image/x-icon" href="https://cdn-cf.shounak.in/shounak-favicon.svg"/> 
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">	
     <style>
         body {
             margin: 0;
-    					padding: 10px;
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    background-image: url('https://images.unsplash.com/photo-1602292678572-16cb94ea0d88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60');
-    background-repeat: no-repeat;  
-    height: 100vh;
-    min-height: 100%;  
-    color: #ddd;
-    max-width: 550px;
-    justify-content: center;
-    margin: 0 auto;
-        }
-
-        .btn1 {
-           border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-left: 0px;
-            margin-right: 30px;
-            margin-top: 20px;
-            margin-bottom: 20px;           
-            text-align: center;
-            background-color: transparent;
-            width: 130px;
-            display: inline-block;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-left: 15px;
-            padding-right: 15px;	
-            box-shadow:
-						  inset 0 0 5px #ffaaf4,
-						  0 0 10px #ffaaf4;   				      
-        }
-        .btn1 {
-            text-decoration: none;
-            text-align: center;
-            color: #fff;
-            font-weight: bold;
-            font-size: 18px;
-        }
-         .btn2 {
-           border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-left: 0px;
-            margin-top: 20px;
-            margin-bottom: 20px;           
-            text-align: center;
-            background-color: transparent;
-            width: 130px;
-            display: inline-block;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-left: 15px;
-            padding-right: 15px;	
-            box-shadow:
-						  inset 0 0 5px #ffaaf4,
-						  0 0 10px #ffaaf4;   				      
-        }
-        .btn2 {
-            text-decoration: none;
-            text-align: center;
-            color: #fff;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        h1 {
-            font-size: 60px;
-            font-weight: bold;
-            color: #fff;
-            text-shadow: 2px 2px 5px #f8a100;
-        }
-        h2 {
-            font-size: 36px;
-            font-weight: bold;
-            color: #fff;
-            text-shadow: 1px 1px 3px #ffaaf4;
-        }
-        p {
-            font-size: 18px;
-            color: #fff;
-            font-weight: bold;
-        }
-        p a {
-            color: #bfffea;
-            text-decoration: none;
-        }
-        .date-box {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #866aff;
-            color: #fff;
             padding: 10px;
-            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            background-image: url('https://images.unsplash.com/photo-1602292678572-16cb94ea0d88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60');
+            background-repeat: no-repeat;    
+            color: #ddd;
+            max-width: 40rem;
+            justify-content: center;
+            margin: 0 auto;
         }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            25% {
+                background-position: 100% 50%;
+            }
+            50% {
+                background-position: 0% 50%;
+            }
+            75% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .btn-whatsappDM {
+    min-width: 10rem;
+    background: linear-gradient(45deg, #388E3C, #4CAF50, #388E3C, #2E7D32, #1B5E20);
+    background-size: 400% 400%;
+    animation: gradientAnimation 6s infinite;
+}
+
+.btn-twitterDM {
+    min-width: 10rem;
+    background: linear-gradient(45deg, #0D47A1, #2196F3, #0D47A1, #1565C0, #0A4CA9);
+    background-size: 400% 400%;
+    animation: gradientAnimation 6s infinite;
+}
+
+.btn-phn {
+    min-width: 10rem;
+    background: linear-gradient(45deg, #E65100, #FF9800, #E65100, #D84315, #EF6C00);
+    background-size: 400% 400%;
+    animation: gradientAnimation 6s infinite;
+}
+
+.btn-mail {
+    min-width: 10rem;
+    background: linear-gradient(45deg, #B71C1C, #FF5722, #B71C1C, #D32F2F, #C62828);
+    background-size: 400% 400%;
+    animation: gradientAnimation 6s infinite;
+}
+
+
+
     </style>
 </head>
 
-<body>
-    <div class="date-box">
+<body class="bg-black text-white min-h-screen flex-col" >
+    <div class="absolute top-2 right-2 bg-gradient-to-br from-purple-400 to-purple-900 text-white p-2 rounded date-box">
         <strong>
-           
             <span id="current-date"></span>
         </strong>
     </div>
-    <h1>Contact Me</h1>
-    <h2>Shounak Pal</h2>
-    <p>Doctor</p>
-    <p>Email: ask@drshounak.com</p>
-    <p>Phone: +9133 3554 2877</p>
-    <p>Website: <a href="https://drshounak.com">drshounak.com</a></p>
-    <p>Clinic: <a href="https://serenityhealth.co.in">serenityhealth.co.in</a></p>
+    <h1 class="text-6xl font-bold mb-2 mb-10 mt-16 text-word">Contact Me</h1>
+    <h2 class="text-2xl font-bold mb-2 px-3">Shounak Pal</h2>
+    <p class="text-lg font-semibold mb-2 px-3">Doctor</p>
+    <p class="text-lg mb-2 px-3">Email: <a href="mailto:ask@drshounak.com" class="text-blue-500">ask@drshounak.com</a></p>
+    <p class="text-lg mb-2 px-3">Phone: +9133 3554 2877</p>
+    <p class="text-lg mb-2 px-3">Website: <a href="https://drshounak.com" class="text-green-500">drshounak.com</a></p>
+    <p class="text-lg mb-2 px-3 mb-7">Clinic: <a href="https://serenityhealth.co.in" class="text-green-500">serenityhealth.co.in</a></p>
     <div class="btn-group">
-        <a href="https://wa.me/+913335542877" class="btn1" target="_blank">WhatsApp Dm</a>
-        <a href="https://twitter.com/messages/compose?recipient_id=1684211912605671424" class="btn2" target="_blank">Twitter DM</a>
-        <a href="tel:+913335542877" class="btn1">Call Me</a>
-        <a href="mailto:ask@drshounak.com" class="btn2">Send Email</a>
+        <div class="bg-1">
+        <a class="btn-whatsappDM inline-block text-center hover:from-pink-400 hover:to-red-400 text-white font-bold py-2 px-6 rounded-r-lg rounded-l-lg mb-4 mr-2 transition duration-300 ease-in-out" href="https://wa.me/+913335542877" target="_blank">WhatsApp Dm</a>
+        <a class="btn-twitterDM inline-block text-center hover:from-pink-400 hover:to-red-400 text-white font-bold py-2 px-6 rounded-r-lg rounded-l-lg mb-4 transition duration-300 ease-in-out" href="https://twitter.com/messages/compose?recipient_id=1684211912605671424" target="_blank">Twitter DM</a>
+        </div>
+        <div class="bg-2">
+        <a class="btn-phn inline-block text-center hover:from-pink-400 hover:to-red-400 text-white font-bold py-2 px-6 rounded-r-lg rounded-l-lg mb-8 mr-2 transition duration-300 ease-in-out" href="tel:+913335542877" >Call Me</a>
+        <a class="btn-mail inline-block text-center hover:from-pink-400 hover:to-red-400 text-white font-bold py-2 px-6 rounded-r-lg rounded-l-lg mb-8 transition duration-300 ease-in-out" href="mailto:ask@drshounak.com" >Send Email</a>
+        </div>
     </div>
     <br>
     <script>
