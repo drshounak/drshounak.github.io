@@ -48,6 +48,7 @@ if(window.top != window.self){
             background-image: url('https://images.unsplash.com/photo-1602292678572-16cb94ea0d88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60');
             background-repeat: no-repeat;
             min-height: 100vh;
+            color: #ddd;
             animation: fadeIn 2s ease-in-out;
         }
 
@@ -60,14 +61,40 @@ if(window.top != window.self){
             }
         }
 
-        .btn-primary:hover, .btn-secondary:hover {
-            transform: scale(1.05);
+        .btn-secondary:hover {
+            transform: scale(1.08);
+        }
+        .social-icon {
+            font-size: 1.5rem;
         }
 
         .social-icon:hover, .text-word:hover {
             transform: scale(1.2);
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.2s ease-in-out;
         }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            25% {
+                background-position: 100% 50%;
+            }
+            50% {
+                background-position: 0% 50%;
+            }
+            75% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .btn-secondary {
+            background: linear-gradient(45deg, #FF69B4, #FF1493, #FF4500, #ffa600da, #d8b803d2);
+            background-size: 400% 400%;
+            animation: gradientAnimation 6s infinite;
+        }
+       
     </style>
 </head>
 
