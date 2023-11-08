@@ -1,151 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card Links</title>
     <meta name="robots" content="noindex">
-    
-     <meta name="theme-color" content="#000000">
-    <meta name="description" content="personal profile page of Shounak Pal">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
-    <link rel="icon" type="image/x-icon" href="https://cdn-cf.shounak.in/shounak-favicon.svg"/>	
+    <meta name="theme-color" content="#000000">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    background-image: url('https://images.unsplash.com/photo-1602292678572-16cb94ea0d88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60');
-    background-repeat: no-repeat;  
-    height: 100vh;
-    min-height: 100%;  
-    color: #ddd;
-    max-width: 800px;
-    justify-content: center;
-    margin: 0 auto;
-  }
-        /* Add some basic CSS for card design */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            background-image: url('https://images.unsplash.com/photo-1602292678572-16cb94ea0d88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGl0Y2glMjBibGFja3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60');
+            background-repeat: no-repeat;  
+            height: 100vh;
+            min-height: 100%;  
+            color: #ddd;
+            animation: fadeIn ease-in-out 2s;
+        }
+
         .card {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin: 35px 20px;            
-            text-align: center;
-            background-color: transparent;
-            width: 300px;
-            display: inline-block;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-left: 15px;
-            padding-right: 15px;
-            
-						  }
-  
-        /* Style for the links inside the cards */
-        .card a {
-            text-decoration: none;
-            text-align: center;
-            color: #fff;
-            font-weight: bold;
-            font-size: 22px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .yellow-gradient {
+            background: linear-gradient(45deg, rgba(255, 215, 0, 0.8), rgba(255, 165, 0, 0.8));
+        }
+
+        .pink-gradient {
+            background: linear-gradient(45deg, #FF69B4, #FF1493);
+        }
+
+        .blue-gradient {
+            background: linear-gradient(45deg, rgba(173, 216, 230, 0.8), rgba(135, 206, 250, 0.8));
+        }
+
+        .purple-gradient {
+            background: linear-gradient(45deg, #800080, #9400D3);
+        }
+
+        .green-gradient {
+            background: linear-gradient(45deg, #008000, #00FF00);
+        }
+
+        .indigo-gradient {
+            background: linear-gradient(45deg, #4B0082, #0000FF);
+        }
+
+        .red-gradient {
+            background: linear-gradient(45deg, #FF0000, #DC143C);
+        }
+
+        .gray-gradient {
+            background: linear-gradient(45deg, #808080, #A9A9A9);
         }
         h1 {
-            font-size: 44px;
-            text-align: center;
-            color: #fff;
-            text-shadow: 2px 2px 5px #f8a100;
-        }
-         /* Media query for desktop screens */
-        @media (min-width: 768px) {
-            .card-container {
-                display: flex;
-                flex-wrap: wrap;
-                }
-           .card:nth-child(odd) {
-                
-                box-shadow:
-						  inset 0 0 15px #f8a100,
-						  0 0 10px #f8a100,
-						  0 0 15px #fff;    
-            }
-            .card:nth-child(even) {
-                
-               box-shadow:
-						  inset 0 0 15px #ffaaf4,
-						  0 0 10px #ffaaf4,
-						  0 0 15px #fff;
-            }
+            font-size: 1rem;
+            font-weight: bold;
+            animation: heartbeat 2s infinite;
         }
 
-        /* Media query for mobile screens */
-        @media (max-width: 767px) {
-            .card-container {
-                display: flex;
-                flex-direction: column;
-            /* First card aligns to the left */
-            .card:nth-child(odd) {
-                align-self: flex-start;
-                box-shadow:
-						  inset 0 0 15px #f8a100,
-						  0 0 10px #f8a100,
-						  0 0 15px #fff;
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
             }
-
-            /* Second card aligns to the right */
-            .card:nth-child(even) {
-                align-self: flex-end;
-               box-shadow:
-						  inset 0 0 15px #ffaaf4,
-						  0 0 10px #ffaaf4,
-						  0 0 15px #fff;
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
             }
         }
     </style>
 </head>
-<body>
-    <div>
-        <h1>Navigate Here Sailor (⁠◔⁠‿⁠◔⁠)</h1>
+
+<body class="bg-black text-white min-h-screen flex flex-col items-center justify-center">
+    <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold">Navigate Here Sailor (⁠◔⁠‿⁠◔⁠)</h1>
     </div>
-    <br>
-    <div class="card-container">
-        <!-- Create individual card elements with links -->
-        <div class="card" onclick="window.location.href='/contact/'">
-            <a href="/contact/">Contact Me</a>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="card yellow-gradient hover:bg-yellow-400 cursor-pointer p-6 rounded-lg transition duration-300 ease-in-out"
+            onclick="window.location.href='/contact/'">
+            <a href="/contact/" class="text-xl font-bold">Contact Me</a>
         </div>
 
-        <div class="card" onclick="window.location.href='/profile/'">
-            <a href="/profile/">Detailed Profile</a>
-        </div>
-        
-        <div class="card" onclick="window.location.href='/music/'">
-            <a href="/music/">Listen to My Playlists</a>
+        <div class="card pink-gradient hover:bg-pink-400 cursor-pointer p-6 rounded-lg transition duration-300 ease-in-out"
+            onclick="window.location.href='/profile/'">
+            <a href="/profile/" class="text-xl font-bold">Detailed Profile</a>
         </div>
 
-        <div class="card" onclick="window.location.href='/blog/'">
-            <a href="/blog/">Read My Blogs</a>
-        </div>
-        
-        <div class="card" onclick="window.location.href='/apps/'">
-            <a href="/apps/">My App Library</a>
+        <div class="card blue-gradient hover:bg-blue-400 cursor-pointer p-6 rounded-lg transition duration-300 ease-in-out"
+            onclick="window.open('https://serenityhealth.co.in/')">
+            <a href="/music/" class="text-xl font-bold">Serenity Health</a>
         </div>
 
-        <div class="card" onclick="window.location.href='/photogallery/'">
-            <a href="/photogallery/">My Photogallery</a>
-        </div>
-        
-        <div class="card" onclick="window.location.href='https://sites.shounak.in/'">
-            <a href="https://sites.shounak.in/">All of my Websites</a>
-        </div>
-        
-        <div class="card" onclick="window.location.href='https://forms.gle/1rRuexzRwtYgcxot7'">
-            <a href="https://forms.gle/1rRuexzRwtYgcxot7">Anonymous Suggestions</a>
+        <div class="card purple-gradient hover:bg-purple-400 cursor-pointer p-6 rounded-lg transition duration-300 ease-in-out"
+            onclick="window.location.href='/blog/'">
+            <a href="/blog/" class="text-xl font-bold">Read My Blogs</a>
         </div>
 
-        <br>
+        <div class="card green-gradient hover:bg-green-400 cursor-pointer p-6 rounded-lg transition duration-300 ease-in-out"
+            onclick="window.open('https://smartgoat.me/apps/')'">
+            <a href="/apps/" class="text-xl font-bold">My App Library</a>
+        </div>
+
+        <div class="card indigo-gradient hover:bg-indigo-400 cursor-pointer p-6 rounded-lg transition duration-300 ease-in-out"
+            onclick="window.location.href='/music/'">
+            <a href="/photogallery/" class="text-xl font-bold">Listen to my playlist</a>
+        </div>
+
+        <div class="card red-gradient hover:bg-red-400 cursor-pointer p-6 rounded-lg transition duration-300 ease-in-out"
+            onclick="window.open('https://sites.shounak.in/')">
+            <a href="https://sites.shounak.in/" class="text-xl font-bold">All of my Websites</a>
+        </div>
+
+        <div class="card gray-gradient hover:bg-gray-400 cursor-pointer p-6 rounded-lg transition duration-300 ease-in-out"
+            onclick="window.open('https://forms.gle/1rRuexzRwtYgcxot7')">
+            <a href="https://forms.gle/1rRuexzRwtYgcxot7" class="text-xl font-bold">Anonymous Suggestions</a>
+        </div>
     </div>
-    <br>
 </body>
+
 </html>
