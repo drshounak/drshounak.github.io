@@ -22,22 +22,14 @@ function checkWinner() {
     return null;
 }
 
-function checkGameState() {
-    const winner = checkWinner();
-    if (winner !== null) {
-        document.getElementById('message').textContent = `Player ${winner} wins!`;
-    } else if (board.every(square => typeof square !== 'number')) {
-        document.getElementById('message').textContent = "It's a draw!";
-    }
-}
 
 function getAiMove() {
     let availableSquares = board.filter(s => typeof s === 'number');
 
     // Check for a winning move for AI
     for (let move of availableSquares) {
-        board[move] = currentPlayer;
-        if (checkWinner() === currentPlayer) {
+        board[move] = 'O'; // Use 'O' as the AI's marker
+        if (checkWinner() === 'O') {
             board[move] = move; // Undo the move
             return move;
         }
@@ -79,12 +71,44 @@ function makeMove(square) {
         board[square] = currentPlayer;
         document.getElementById('message').textContent = '';
         document.querySelectorAll('.cell')[square].textContent = currentPlayer;
-        if (checkWinner() === null) {
+        const winner = checkWinner();
+        const winnerNotification = document.getElementById('winner-notification');
+
+        if (winner) {
+            // Update the winner notification message
+            winnerNotification.textContent = `Player ${winner} Wins!`;
+
+            // Show the winner notification
+            winnerNotification.style.display = 'block';
+
+            // Hide the winner notification after 3 seconds
+            setTimeout(() => {
+                winnerNotification.style.display = 'none';
+            }, 3000);
+
+            // Update the main message element
+            document.getElementById('message').textContent = `Player ${winner} wins!`;
+        } else if (board.every(square => typeof square === 'string')) {
+            // Update the draw notification message
+            document.getElementById('message').textContent = 'It\'s a draw!';
+        } else {
+            // Switch players and trigger AI's turn
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
             aiTurn();
         }
     }
 }
+
+
+function checkGameState() {
+    const winner = checkWinner();
+    if (winner !== null) {
+        document.getElementById('message').textContent = `Player ${winner} wins!`;
+    } else if (board.every(square => typeof square !== 'number')) {
+        document.getElementById('message').textContent = "It's a draw!";
+    }
+}
+
 
 function restartGame() {
     for (let i = 0; i < board.length; i++) {
