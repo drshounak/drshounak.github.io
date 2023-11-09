@@ -22,37 +22,31 @@ function checkWinner() {
     return null;
 }
 
-function makeMove(square) {
-    if (typeof board[square] === 'number') {
-        board[square] = currentPlayer;
-        document.getElementById('message').textContent = '';
-        document.querySelectorAll('.cell')[square].textContent = currentPlayer;
-        const winner = checkWinner();
-        if (winner) {
-            // Update the winner notification message
-            const winnerNotification = document.getElementById('winner-notification');
-            winnerNotification.textContent = `Player ${winner} Wins!`;
+function getAiMove() {
+        let availableSquares = board.filter(s => typeof s === 'number');
+        if (availableSquares.length > 0) {
+            let randomMove = availableSquares[Math.floor(Math.random() * availableSquares.length)];
+            return randomMove;
+        }
+        return null;
+    }
 
-            // Show the winner notification
-            winnerNotification.style.display = 'block';
+    function makeMove(square) {
+        if (typeof board[square] === 'number') {
+            board[square] = currentPlayer;
+            document.getElementById('message').textContent = '';
+            document.querySelectorAll('.cell')[square].textContent = currentPlayer;
+            checkGameState();
 
-            // Hide the winner notification after 3 seconds
-            setTimeout(() => {
-                winnerNotification.style.display = 'none';
-            }, 3000);
-
-            // Update the main message element
-            document.getElementById('message').textContent = `Player ${winner} wins!`;
-        } else if (board.every(square => typeof square === 'string')) {
-            // Update the draw notification message
-            document.getElementById('message').textContent = 'It\'s a draw!';
-
-            // You can also add a draw notification here if you want
-        } else {
-            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            let aiMove = getAiMove();
+            if (aiMove !== null) {
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                board[aiMove] = currentPlayer;
+                document.querySelectorAll('.cell')[aiMove].textContent = currentPlayer;
+                checkGameState();
+            }
         }
     }
-}
 
 function restartGame() {
     for (let i = 0; i < board.length; i++) {
